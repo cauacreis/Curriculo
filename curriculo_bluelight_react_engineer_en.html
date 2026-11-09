@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume — Cauã Felype Reis (React & Frontend Software Engineer)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #2563eb;
+      --accent-light: #eff6ff;
+      --text: #334155;
+      --text-dark: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --bg: #ffffff;
+      --tag-bg: #f8fafc;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #f8fafc;
+      color: var(--text);
+      line-height: 1.44;
+      font-size: 11.8px;
+      -webkit-font-smoothing: antialiased;
+      padding: 16px;
+    }
+    .page-container {
+      max-width: 840px;
+      margin: 0 auto;
+      background: var(--bg);
+      padding: 34px 42px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      border-radius: 6px;
+    }
+    header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 12px;
+      margin-bottom: 13px;
+    }
+    h1.name {
+      font-size: 23px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+    .title-role {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      font-size: 11.5px;
+      color: var(--text-muted);
+    }
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .contact-item a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact-item a:hover {
+      color: var(--accent);
+    }
+    section {
+      margin-bottom: 13px;
+    }
+    h2.section-title {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--primary);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 3px;
+      margin-bottom: 7px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    h2.section-title::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 12px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    p.summary {
+      color: var(--text);
+      text-align: justify;
+      margin-bottom: 4px;
+      font-size: 11.4px;
+      line-height: 1.45;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 14px;
+      margin-top: 4px;
+    }
+    .skill-card {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 6px 9px;
+    }
+    .skill-card-title {
+      font-weight: 700;
+      color: var(--text-dark);
+      font-size: 11.5px;
+      margin-bottom: 2px;
+    }
+    .skill-card-desc {
+      font-size: 10.8px;
+      color: var(--text-muted);
+      line-height: 1.34;
+    }
+    .job-item {
+      margin-bottom: 10px;
+      page-break-inside: avoid;
+    }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+    .job-title {
+      font-weight: 700;
+      color: var(--text-dark);
+      font-size: 12.5px;
+    }
+    .job-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--accent);
+      background: var(--accent-light);
+      border: 1px solid #bfdbfe;
+      padding: 1px 6px;
+      border-radius: 3px;
+      margin-left: 5px;
+    }
+    .job-company {
+      font-weight: 600;
+      color: var(--accent);
+      font-size: 12px;
+    }
+    .job-period {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .job-desc {
+      font-size: 10.8px;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-bottom: 3px;
+    }
+    ul.bullet-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    ul.bullet-list li {
+      position: relative;
+      padding-left: 14px;
+      margin-bottom: 3px;
+      font-size: 11.2px;
+      color: var(--text);
+      line-height: 1.38;
+      text-align: justify;
+    }
+    ul.bullet-list li::before {
+      content: "•";
+      position: absolute;
+      left: 3px;
+      color: var(--accent);
+      font-weight: bold;
+    }
+    ul.bullet-list li strong {
+      color: var(--text-dark);
+    }
+    .edu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+    .edu-title {
+      font-weight: 700;
+      color: var(--text-dark);
+      font-size: 11.8px;
+    }
+    .edu-school {
+      font-weight: 600;
+      color: var(--accent);
+      font-size: 11.2px;
+    }
+    .edu-period {
+      font-size: 10.8px;
+      color: var(--text-muted);
+    }
+    .edu-details {
+      font-size: 10.8px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      background: #f1f5f9;
+      padding: 1px 4px;
+      border-radius: 3px;
+    }
+    .page-break {
+      page-break-before: always;
+    }
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+      .page-container {
+        padding: 0;
+        box-shadow: none;
+        max-width: 100%;
+      }
+      .job-item {
+        page-break-inside: avoid;
+      }
+      @page {
+        margin: 12mm 14mm;
+        size: A4 portrait;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-container">
+    <!-- PAGE 1 -->
+    <header>
+      <h1 class="name">Cauã Felype Caetano Reis</h1>
+      <div class="title-role">React & Frontend Software Engineer · React 19/18, TypeScript, Next.js & React Native</div>
+      <div class="contact-bar">
+        <span class="contact-item">📍 Goiás, Brazil (Remote · LatAm)</span>
+        <span class="contact-item">📞 +55 (62) 9 9452-1953</span>
+        <span class="contact-item">✉️ <a href="mailto:caua.reis.dev@gmail.com">caua.reis.dev@gmail.com</a></span>
+        <span class="contact-item">🔗 <a href="https://linkedin.com/in/cauafelypereis">linkedin.com/in/cauafelypereis</a></span>
+        <span class="contact-item">💻 <a href="https://github.com/cauacreis">github.com/cauacreis</a></span>
+        <span class="contact-item">🌐 <a href="https://gymflow-weld.vercel.app">Portfolio (Vercel)</a></span>
+      </div>
+    </header>
+
+    <section>
+      <h2 class="section-title">Professional Summary</h2>
+      <p class="summary">
+        Results-driven React & Frontend Software Engineer with deep expertise in building high-performance, responsive web and mobile applications using <strong>React 19/18, TypeScript, Next.js (App Router), and React Native (Expo SDK 58)</strong>. Lead frontend and systems architect for <strong>SKZ Trading</strong>, deploying real-time financial dashboards with sub-100ms WebSocket updates and 99.9% uptime. Co-author of an applied AI and software engineering research paper submitted to the prestigious <strong>IEEE Transactions on Software Engineering (IEEE TSE)</strong>. Extensive experience implementing component-driven design systems, state management, complex 3D visualizations (<strong>Three.js / WebGL</strong>), and automated test suites (<strong>37 tests in Jest</strong>). Certified in Agile (<strong>Scrum SFC™</strong>), advanced English communicator with extreme ownership, and forensic attention to UI performance, responsiveness, and clean architecture.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="section-title">Core Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-card-title">⚛️ React & UI Engineering</div>
+          <div class="skill-card-desc">React 19/18, Next.js (App Router, SSR, SSG), TypeScript, JavaScript (ESNext), React Native (Expo SDK 58), Tailwind CSS, Vite, HTML5, CSS3, Core Web Vitals optimization.</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-title">🔄 State Management & Streaming</div>
+          <div class="skill-card-desc">Custom React Hooks, Context API, Zustand, Redux Toolkit concepts, React Query / TanStack Query, RESTful API integration, WebSockets (real-time bidirectional streaming).</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-title">🌐 Interactive 3D & Data Viz</div>
+          <div class="skill-card-desc">Three.js, React Three Fiber (R3F), WebGL 3D meshes & point clouds, Lucide Icons, Recharts (real-time telemetry and data visualization charts).</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-title">🧪 Testing, Architecture & DevOps</div>
+          <div class="skill-card-desc">Automated testing with Jest & React Testing Library, Clean Architecture, Git/GitHub (GitFlow, PRs), CI/CD (GitHub Actions), Docker, Vercel deployments, Scrum (SFC™ Certified).</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Professional Experience & Production Systems</h2>
+
+      <div class="job-item">
+        <div class="job-header">
+          <div>
+            <span class="job-title">Lead Frontend & Full Stack Software Engineer</span> — <span class="job-company">SKZ Trading</span>
+            <span class="job-badge">24/7 Production</span>
+          </div>
+          <span class="job-period">Jul 2026 – Present</span>
+        </div>
+        <div class="job-desc">High-velocity digital asset algorithmic trading SaaS integrated with real-time financial APIs and market feeds</div>
+        <ul class="bullet-list">
+          <li><strong>Real-Time React Dashboard:</strong> Architected and deployed an executive analytics web dashboard using React (Vite) and TypeScript, consuming WebSocket market feeds with live order book telemetry and sub-100ms latency.</li>
+          <li><strong>Security & Authentication:</strong> Implemented two-factor authentication (2FA) via dynamic QR code generation, session state safeguards, and local asymmetric encryption (Ed25519/AES) adhering to OWASP Top 10 security standards.</li>
+          <li><strong>Financial Telemetry & Analytics:</strong> Designed modular UI components with interactive data visualization charts, automated profit-margin calculations, and instant webhook confirmation for PIX payouts with 99.9% uptime.</li>
+          <li><strong>Performance Optimization:</strong> Minimized unnecessary re-renders using custom React hooks, memoization (<code>useMemo</code>, <code>useCallback</code>), and lazy loading, reducing initial bundle size by 40%.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PAGE 2 -->
+    <div class="page-break"></div>
+
+    <section style="margin-top: 10px;">
+      <h2 class="section-title">Key Engineering Projects & Applied Research</h2>
+
+      <div class="job-item">
+        <div class="job-header">
+          <div>
+            <span class="job-title">GymFlow — Mobile-First Smart Gym SaaS Platform</span>
+            <span class="job-badge">Next.js / TypeScript / Vercel</span>
+          </div>
+          <span class="job-period">Sep 2026</span>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>Modern Next.js Architecture:</strong> Built a high-performance web app utilizing Next.js 14 (App Router), TypeScript, and Tailwind CSS, fully optimized for mobile viewports (<code>viewport-fit=cover</code>) and deployed to <strong>Vercel</strong> with edge caching.</li>
+          <li><strong>Anti-Fraud Dynamic Token System (GymFlow Pass):</strong> Engineered a dynamic rotational QR-code access pass with 30-second in-memory expiration cycles to eliminate unauthorized screen-sharing.</li>
+          <li><strong>Interactive Workout Builder:</strong> Designed a component-driven split training interface with interactive haptic rest timers, real-time tonnage calculation, and integrated payment checkout via Mercado Pago.</li>
+        </ul>
+      </div>
+
+      <div class="job-item">
+        <div class="job-header">
+          <div>
+            <span class="job-title">Bodega do Vidigal — Offline-First POS & Kitchen Display System (KDS)</span>
+            <span class="job-badge">React Native / 37 Tests</span>
+          </div>
+          <span class="job-period">2026</span>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>Offline-First React Native Application:</strong> Built a cross-platform Point of Sale (POS) and Kitchen Display System (KDS) using React Native (Expo SDK 58), operating 100% offline via local Wi-Fi peer-to-peer WebSockets with sub-10ms latency.</li>
+          <li><strong>Touchless Operational UX:</strong> Developed a touchless kitchen display interface designed for greasy kitchen environments, featuring a real-time order aggregator ("Meat Counter") that computes required grill items by chronological FIFO priority.</li>
+          <li><strong>Automated Testing Suite (Jest):</strong> Implemented 37 automated unit and integration tests covering the complete order state machine, custom item notes, and nightly automatic reset routines.</li>
+        </ul>
+      </div>
+
+      <div class="job-item">
+        <div class="job-header">
+          <div>
+            <span class="job-title">OrenAI — 3D Mineral Exploration Platform & Research Paper (IEEE TSE)</span>
+            <span class="job-badge">Three.js / WebGL / React</span>
+          </div>
+          <span class="job-period">2025 – Present</span>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>Interactive 3D Sub-surface Visualization:</strong> Developed a WebGL 3D sub-surface viewer in Three.js and React, rendering geological point clouds, mineral deposit meshes, and interactive 2D geospatial mapping layers.</li>
+          <li><strong>Scientific Publication:</strong> Co-authored a research paper submitted to the prestigious <strong>IEEE Transactions on Software Engineering (IEEE TSE)</strong>, responsible for system architecture diagrams, user interaction flows, and technical documentation.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Education & Certifications</h2>
+      <div class="edu-item">
+        <div>
+          <span class="edu-title">B.S. in Software Engineering</span> — <span class="edu-school">UniEVANGÉLICA</span>
+        </div>
+        <span class="edu-period">4th Semester | Expected: 2027/2028</span>
+      </div>
+      <div class="edu-details">
+        • Evening classes — <strong>100% available for full-time business hours (Monday – Friday)</strong>.
+      </div>
+      <div class="edu-details">
+        • Vice-President of the CodeUp Academic Directory; Director of Arts & Tech Culture.
+      </div>
+
+      <div class="edu-item" style="margin-top: 8px;">
+        <div>
+          <span class="edu-title">Desktop Developer Track: C#, Java, Relational Databases (SQL), OOP, UML</span> — <span class="edu-school">Instituto Mix</span>
+        </div>
+        <span class="edu-period">Oct 2022 – Jun 2024</span>
+      </div>
+      <div class="edu-details">
+        • Practical coursework in Object-Oriented Programming, Relational Modeling, and Distributed System Fundamentals.
+      </div>
+
+      <div class="edu-details" style="margin-top: 8px;">
+        • <strong>Certifications:</strong> Scrum Fundamentals Certified (SFC™) · Technical Storytelling & System Documentation.
+      </div>
+      <div class="edu-details" style="margin-top: 4px;">
+        • <strong>Languages:</strong> Portuguese (Native) · English (Advanced — Fluent technical documentation, scientific writing, and verbal collaboration).
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
