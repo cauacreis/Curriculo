@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume — Cauã Felype Reis (Junior Python Developer · BairesDev)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #0284c7;
+      --accent-light: #e0f2fe;
+      --text: #334155;
+      --text-dark: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --bg: #ffffff;
+      --tag-bg: #f8fafc;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #f8fafc;
+      color: var(--text);
+      line-height: 1.44;
+      font-size: 11.8px;
+      -webkit-font-smoothing: antialiased;
+      padding: 16px;
+    }
+    .page-container {
+      max-width: 840px;
+      margin: 0 auto;
+      background: var(--bg);
+      padding: 34px 42px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      border-radius: 6px;
+    }
+    header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 12px;
+      margin-bottom: 13px;
+    }
+    h1.name {
+      font-size: 23px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+    .title-role {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      font-size: 11.5px;
+      color: var(--text-muted);
+    }
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .contact-item a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact-item a:hover {
+      color: var(--accent);
+    }
+    section {
+      margin-bottom: 13px;
+    }
+    h2.section-title {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--primary);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 3px;
+      margin-bottom: 7px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    h2.section-title::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 12px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    p.summary {
+      color: var(--text);
+      text-align: justify;
+      margin-bottom: 4px;
+      font-size: 11.4px;
+      line-height: 1.45;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 14px;
+      margin-top: 4px;
+    }
+    .skill-card {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 6px 9px;
+    }
+    .skill-card-title {
+      font-weight: 700;
+      color: var(--text-dark);
+      font-size: 11.5px;
+      margin-bottom: 2px;
+    }
+    .skill-card-desc {
+      font-size: 10.8px;
+      color: var(--text-muted);
+      line-height: 1.34;
+    }
+    .job-item {
+      margin-bottom: 10px;
+      page-break-inside: avoid;
+    }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+    .job-title {
+      font-weight: 700;
+      color: var(--text-dark);
+      font-size: 12.5px;
+    }
+    .job-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--accent);
+      background: var(--accent-light);
+      border: 1px solid #bae6fd;
+      padding: 1px 6px;
+      border-radius: 3px;
+      margin-left: 5px;
+    }
+    .job-company {
+      font-weight: 600;
+      color: var(--accent);
+      font-size: 12px;
+    }
+    .job-period {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .job-desc {
+      font-size: 10.8px;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-bottom: 3px;
+    }
+    ul.bullet-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    ul.bullet-list li {
+      position: relative;
+      padding-left: 14px;
+      margin-bottom: 3px;
+      font-size: 11.2px;
+      color: var(--text);
+      line-height: 1.38;
+      text-align: justify;
+    }
+    ul.bullet-list li::before {
+      content: "•";
+      position: absolute;
+      left: 3px;
+      color: var(--accent);
+      font-weight: bold;
+    }
+    ul.bullet-list li strong {
+      color: var(--text-dark);
+    }
+    .edu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+    .edu-title {
+      font-weight: 700;
+      color: var(--text-dark);
+      font-size: 11.8px;
+    }
+    .edu-school {
+      font-weight: 600;
+      color: var(--accent);
+      font-size: 11.2px;
+    }
+    .edu-period {
+      font-size: 10.8px;
+      color: var(--text-muted);
+    }
+    .edu-details {
+      font-size: 10.8px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      background: #f1f5f9;
+      padding: 1px 4px;
+      border-radius: 3px;
+    }
+    .page-break {
+      page-break-before: always;
+    }
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+      .page-container {
+        padding: 0;
+        box-shadow: none;
+        max-width: 100%;
+      }
+      .job-item {
+        page-break-inside: avoid;
+      }
+      @page {
+        margin: 12mm 14mm;
+        size: A4 portrait;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-container">
+    <!-- PAGE 1 -->
+    <header>
+      <h1 class="name">Cauã Felype Caetano Reis</h1>
+      <div class="title-role">Junior Python Developer · Asynchronous Systems, FastAPI & Clean Code</div>
+      <div class="contact-bar">
+        <span class="contact-item">📍 Goiás, Brazil (Remote)</span>
+        <span class="contact-item">📞 +55 (62) 9 9452-1953</span>
+        <span class="contact-item">✉️ <a href="mailto:caua.reis.dev@gmail.com">caua.reis.dev@gmail.com</a></span>
+        <span class="contact-item">🔗 <a href="https://linkedin.com/in/cauafelypereis">linkedin.com/in/cauafelypereis</a></span>
+        <span class="contact-item">💻 <a href="https://github.com/cauacreis">github.com/cauacreis</a></span>
+        <span class="contact-item">🌐 <a href="https://gymflow-weld.vercel.app">Portfolio (Vercel)</a></span>
+      </div>
+    </header>
+
+    <section>
+      <h2 class="section-title">Professional Summary</h2>
+      <p class="summary">
+        Analytical and results-driven Junior Python Developer with 2+ years of hands-on software development experience and a proven track record of architecting, deploying, and maintaining high-availability asynchronous backend systems in production. Lead architect and operator of <strong>SKZ Trading</strong>, a 24/7 digital asset arbitrage SaaS orchestrating 11 distributed Python microservices (<code>asyncio</code>, <code>aiohttp</code>, FastAPI) maintaining 99.9% uptime with sub-100ms latency and zero transactional loss. Co-author of an applied AI and software engineering research paper submitted to the prestigious <strong>IEEE Transactions on Software Engineering (IEEE TSE)</strong>. Solid foundation in object-oriented programming, data structures, algorithms, and relational databases. Certified in Agile (<strong>Scrum SFC™</strong>), advanced English speaker prepared for global client collaboration, and driven by continuous learning, code quality, and peer review best practices.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="section-title">Core Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-card-title">🐍 Python & Backend Engineering</div>
+          <div class="skill-card-desc">Python 3.11+, AsyncIO, aiohttp, FastAPI, RESTful API design, Pydantic v2, Object-Oriented Programming (OOP), Data Structures & Algorithms, Design Patterns.</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-title">⚙️ Microservices & Background Workers</div>
+          <div class="skill-card-desc">Asynchronous Task Queues, Worker Daemons, Event Loops, WebSockets (real-time bidirectionality), Microservices Architecture, Process Management (PM2, systemd).</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-title">💾 Databases & Data Modeling</div>
+          <div class="skill-card-desc">PostgreSQL, MySQL, SQLite (Outbox pattern), Redis (in-memory caching & pub/sub), relational schema design, query optimization, indexing, ACID transactions.</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-title">🛠️ DevOps, Testing & Agile</div>
+          <div class="skill-card-desc">Git & GitHub (GitFlow, PRs, Code Reviews), Docker, Linux/VPS, Pytest, Unit Testing, CI/CD (GitHub Actions), Clean Code, Scrum (SFC™ Certified).</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Professional Experience & Production Systems</h2>
+
+      <div class="job-item">
+        <div class="job-header">
+          <div>
+            <span class="job-title">Python Software Engineer & Lead Architect</span> — <span class="job-company">SKZ Trading</span>
+            <span class="job-badge">24/7 Production</span>
+          </div>
+          <span class="job-period">Jul 2026 – Present</span>
+        </div>
+        <div class="job-desc">High-throughput digital asset algorithmic trading SaaS integrated with real-time financial and partner APIs</div>
+        <ul class="bullet-list">
+          <li><strong>Distributed Python Microservices:</strong> Architected, deployed, and maintain 11 asynchronous microservices in Python (<code>asyncio</code>, <code>aiohttp</code>) running continuous 20-second market scans on Linux VPS with sub-100ms API response latency.</li>
+          <li><strong>FastAPI Endpoint Architecture:</strong> Built and documented RESTful API endpoints using FastAPI and Pydantic v2 schemas for robust serialization, parameter validation, and error handling.</li>
+          <li><strong>Algorithmic Pricing Engine:</strong> Engineered a proprietary liquidity evaluation algorithm with liquidity scoring, minimum 12% buy discount, and hard-coded anti-loss circuit breakers preventing sales below acquisition costs.</li>
+          <li><strong>Financial Pipelines & Webhooks:</strong> Modeled relational MySQL databases with ACID compliance, automating split payouts via Mercado Pago webhooks (PIX) and maintaining 99.9% uptime across 200+ completed trades.</li>
+          <li><strong>Security Hardening:</strong> Implemented server-side encryption (Ed25519/AES) adhering to OWASP Top 10 guidelines, eliminating exposed secrets and securing API payloads in transit.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PAGE 2 -->
+    <div class="page-break"></div>
+
+    <section style="margin-top: 10px;">
+      <h2 class="section-title">Applied Engineering Projects & Research</h2>
+
+      <div class="job-item">
+        <div class="job-header">
+          <div>
+            <span class="job-title">OrenAI — Enterprise AI Platform & Research Paper (IEEE TSE)</span>
+            <span class="job-badge">Python / Machine Learning</span>
+          </div>
+          <span class="job-period">2025 – Present</span>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>Machine Learning & XAI Pipelines:</strong> Co-developed predictive models combining Gradient Boosting (XGBoost/LightGBM) with Explainable AI (SHAP), enabling complete mathematical transparency for geospatial mineral exploration targets.</li>
+          <li><strong>Multi-Agent Architecture:</strong> Engineered containerized agent workflows in Docker to isolate commodity processing pipelines, accelerating spatial computation and benchmarking.</li>
+          <li><strong>Scientific Publication:</strong> Co-authored a research paper submitted to the prestigious <strong>IEEE Transactions on Software Engineering (IEEE TSE)</strong>, responsible for system topology diagrams, mathematical formalization, and technical documentation.</li>
+        </ul>
+      </div>
+
+      <div class="job-item">
+        <div class="job-header">
+          <div>
+            <span class="job-title">LeadProspector & LinkedinTalk — Autonomous Python Agents</span>
+            <span class="job-badge">Python 3.11 / Redis / Postgres</span>
+          </div>
+          <span class="job-period">2025 – 2026</span>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>State Machine Automation:</strong> Built an autonomous B2B lead ingestion pipeline in Python 3.11 with Docker Compose, Redis, and PostgreSQL, implementing an 8-stage state machine and automated outreach flows.</li>
+          <li><strong>Defensive API Architecture:</strong> Built a companion personal branding copilot in Python (FastAPI) and TypeScript featuring anti-rate-limit algorithms, automated unit tests, and GitHub Actions CI/CD.</li>
+        </ul>
+      </div>
+
+      <div class="job-item">
+        <div class="job-header">
+          <div>
+            <span class="job-title">Bodega do Vidigal — Local-First POS & Kitchen Display System (KDS)</span>
+            <span class="job-badge">Systems & Relational Persistence</span>
+          </div>
+          <span class="job-period">2026</span>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>High-Resilience Outbox Pattern:</strong> Modeled local SQLite relational persistence with an atomic Outbox pattern, guaranteeing zero duplicate orders and complete state recovery upon unexpected restarts.</li>
+          <li><strong>Automated Testing Suite:</strong> Implemented 37 automated tests (Jest) validating order state machines, FIFO kitchen prioritization, and nightly automatic reset routines.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Education & Certifications</h2>
+      <div class="edu-item">
+        <div>
+          <span class="edu-title">B.S. in Software Engineering</span> — <span class="edu-school">UniEVANGÉLICA (Anápolis, GO)</span>
+        </div>
+        <span class="edu-period">4th Semester | Expected: 2027/2028</span>
+      </div>
+      <div class="edu-details">
+        • Evening classes — <strong>100% available for full-time business hours (Monday – Friday)</strong>.
+      </div>
+      <div class="edu-details">
+        • Vice-President of the CodeUp Academic Directory; Director of Arts & Tech Culture.
+      </div>
+
+      <div class="edu-item" style="margin-top: 8px;">
+        <div>
+          <span class="edu-title">Desktop Developer Track: C#, Java, Relational Databases (SQL), OOP, UML</span> — <span class="edu-school">Instituto Mix</span>
+        </div>
+        <span class="edu-period">Oct 2022 – Jun 2024</span>
+      </div>
+      <div class="edu-details">
+        • Practical coursework in Object-Oriented Programming, Relational Modeling, and Distributed System Fundamentals.
+      </div>
+
+      <div class="edu-details" style="margin-top: 8px;">
+        • <strong>Certifications:</strong> Scrum Fundamentals Certified (SFC™) · Technical Storytelling & System Documentation.
+      </div>
+      <div class="edu-details" style="margin-top: 4px;">
+        • <strong>Languages:</strong> Portuguese (Native) · English (Advanced — Fluent technical documentation, scientific writing, and verbal collaboration).
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
