@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Currículo — Cauã Felype Reis (Desenvolvedor de Sistemas Jr.)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #2563eb;
+      --text: #334155;
+      --text-dark: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --bg: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #f8fafc;
+      color: var(--text);
+      line-height: 1.45;
+      font-size: 13px;
+      -webkit-font-smoothing: antialiased;
+      padding: 24px;
+    }
+    .page-container {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--bg);
+      padding: 40px 48px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+    }
+    header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 14px;
+      margin-bottom: 18px;
+    }
+    h1.name {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .title-role {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 18px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .contact-bar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    section { margin-bottom: 18px; }
+    .section-title {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 3px;
+    }
+    p.summary { font-size: 12.8px; line-height: 1.5; text-align: justify; }
+    .skill-row { display: flex; gap: 8px; font-size: 12.2px; margin-bottom: 4px; }
+    .skill-label { font-weight: 700; color: var(--text-dark); min-width: 145px; flex-shrink: 0; }
+    .skill-val { color: var(--text); }
+    .item-block { margin-bottom: 14px; }
+    .item-header { display: flex; justify-content: space-between; align-items: baseline; }
+    .item-title { font-size: 13.5px; font-weight: 700; color: var(--text-dark); }
+    .item-title a { color: var(--text-dark); text-decoration: none; }
+    .item-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent);
+      background: #eff6ff;
+      border: 1px solid #dbeafe;
+      padding: 1px 6px;
+      border-radius: 4px;
+      margin-left: 6px;
+    }
+    .item-date { font-size: 11.5px; font-weight: 500; color: var(--text-muted); }
+    .item-subtitle { font-size: 12px; font-weight: 600; color: var(--text-muted); margin-bottom: 5px; font-style: italic; }
+    ul.item-bullets { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+    ul.item-bullets li {
+      position: relative;
+      padding-left: 14px;
+      font-size: 12.5px;
+      line-height: 1.45;
+      color: var(--text);
+      text-align: justify;
+    }
+    ul.item-bullets li::before {
+      content: "•";
+      position: absolute;
+      left: 2px;
+      color: var(--accent);
+      font-weight: bold;
+    }
+    ul.item-bullets li strong { color: var(--text-dark); font-weight: 600; }
+    @media print {
+      body { background: #fff; padding: 0; font-size: 12px; }
+      .page-container { max-width: 100%; padding: 0; box-shadow: none; border-radius: 0; }
+      .no-print { display: none !important; }
+      a { text-decoration: none; color: inherit !important; }
+    }
+    .actions-bar {
+      max-width: 860px;
+      margin: 0 auto 14px auto;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .btn {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+</style>
+</head>
+<body>
+  <div class="actions-bar no-print">
+    <button class="btn" onclick="window.print()">🖨️ Imprimir / Salvar em PDF</button>
+  </div>
+  <div class="page-container">
+    <header>
+      <h1 class="name">Cauã Felype Caetano Reis</h1>
+      <div class="title-role">Desenvolvedor de Sistemas Jr. · C# / .NET · SQL Server · Backend & ERP</div>
+      <div class="contact-bar">
+        <div>📍 Itaguaru, GO — Brasil</div>
+        <div>📞 (62) 9 9452-1953</div>
+        <div>✉️ <a href="mailto:caua.reis.dev@gmail.com">caua.reis.dev@gmail.com</a></div>
+        <div>🔗 <a href="https://linkedin.com/in/cauafelypereis" target="_blank">linkedin.com/in/cauafelypereis</a></div>
+        <div>💻 <a href="https://github.com/cauacreis" target="_blank">github.com/cauacreis</a></div>
+        <div>🕒 Disponibilidade: 13h00 às 22h00</div>
+      </div>
+    </header>
+
+    <section>
+      <div class="section-title">Resumo Profissional</div>
+      <p class="summary">
+        Estudante de Engenharia de Software (4º período na UniEVANGÉLICA) com sólida formação em <strong>C#</strong>, lógica de programação, orientação a objetos e bancos de dados relacionais (<strong>SQL / SQL Server</strong>). Experiência prática comprovada no desenvolvimento e manutenção de sistemas corporativos, regras de negócio e integrações de APIs REST. Familiaridade com rotinas de suporte técnico a usuários, depuração de erros em produção (troubleshooting) e metodologias ágeis (Scrum/Kanban). Certificado pelo Instituto Mix na trilha completa de <strong>C# e Banco de Dados</strong>, com histórico de atuação em plataformas SaaS de alta disponibilidade e coautoria de artigo científico em engenharia de software submetido à <strong>IEEE Transactions on Software Engineering</strong>. Total disponibilidade para atuação no turno das 13h00 às 22h00 em modelo 100% remoto.
+      </p>
+    </section>
+
+    <section>
+      <div class="section-title">Habilidades Técnicas</div>
+      <div class="skill-row"><span class="skill-label">Linguagens:</span><span class="skill-val">C#, SQL (SQL Server, PostgreSQL, MySQL), Java 21, JavaScript/TypeScript, Python</span></div>
+      <div class="skill-row"><span class="skill-label">Desenvolvimento & ERP:</span><span class="skill-val">Programação Orientada a Objetos (POO), Design Patterns, Lógica de Programação, Módulos ERP, APIs RESTful, Modelagem e Normalização Relacional (3FN)</span></div>
+      <div class="skill-row"><span class="skill-label">Bancos de Dados:</span><span class="skill-val">SQL Server, T-SQL, PostgreSQL, Consultas Complexas, Índices, Transações ACID, Stored Procedures, H2 Database</span></div>
+      <div class="skill-row"><span class="skill-label">Web & Ferramentas:</span><span class="skill-val">HTML5, CSS3, JavaScript, Node.js, Angular básico, Git, GitHub, SVN básico, Docker, Visual Studio, VS Code, DBeaver, Postman</span></div>
+      <div class="skill-row"><span class="skill-label">Metodologias & Suporte:</span><span class="skill-val">Scrum (Certificação SFC™ - Scrum Fundamentals Certified), Kanban, Análise de Requisitos, Resolução de Bugs, Atendimento Técnico N1/N2</span></div>
+    </section>
+
+    <section>
+      <div class="section-title">Experiência e Projetos Relevantes</div>
+      
+      <div class="item-block">
+        <div class="item-header">
+          <div class="item-title">SKZ Trading — Plataforma SaaS de Operações e Gestão <span class="item-badge">Produção 24/7</span></div>
+          <div class="item-date">Jul 2026 – Presente | skztrading.com</div>
+        </div>
+        <div class="item-subtitle">Desenvolvedor de Software & Arquiteto | Plataforma Comercial</div>
+        <ul class="item-bullets">
+          <li><strong>Operações e Integridade Transacional:</strong> Desenvolvi e mantenho módulos de gestão de inventário, conciliação de pagamentos e liquidação financeira rodando 24 horas por dia em ambiente de produção contínua.</li>
+          <li><strong>Regras de Negócio e Travas Anti-Erro:</strong> Implementei validações de negócio com algoritmo anti-prejuízo que impede vendas abaixo do custo e cálculo dinâmico de comissões, garantindo integridade de dados contábeis.</li>
+          <li><strong>Troubleshooting e Suporte:</strong> Diagnostico e resolvo falhas operacionais e bugs em tempo real, prestando suporte a usuários ativos da plataforma.</li>
+        </ul>
+      </div>
+
+      <div class="item-block">
+        <div class="item-header">
+          <div class="item-title">CoreSync CRM — Sistema de Gestão Empresarial Multi-Tenant (B2B) <span class="item-badge">B2B SaaS</span></div>
+          <div class="item-date">github.com/cauacreis/CoreSync-CRM</div>
+        </div>
+        <div class="item-subtitle">Desenvolvedor Backend</div>
+        <ul class="item-bullets">
+          <li><strong>Modelagem Relacional e Gestão:</strong> Participei da modelagem de dados relacionais para ambiente multi-empresa com rigoroso isolamento lógico de inquilinos, histórico de auditoria e geração automatizada de relatórios gerenciais e faturamento.</li>
+          <li><strong>APIs RESTful e Permissões:</strong> Criei serviços REST desacoplados com validação de regras de acesso por perfil (administrador, gerente, vendedor).</li>
+        </ul>
+      </div>
+
+      <div class="item-block">
+        <div class="item-header">
+          <div class="item-title">NexoTrade-OS — Processamento Transacional e Regras de Negócio <span class="item-badge">Transações / SQL</span></div>
+          <div class="item-date">github.com/cauacreis/NexoTrade-OS</div>
+        </div>
+        <div class="item-subtitle">Desenvolvedor Backend</div>
+        <ul class="item-bullets">
+          <li>Desenvolvi motor de execução e persistência contínua em banco de dados relacional com tratamento defensivo de exceções e testes automatizados de integridade transacional.</li>
+        </ul>
+      </div>
+
+      <div class="item-block">
+        <div class="item-header">
+          <div class="item-title">Formação Prática em C# e Banco de Dados (Instituto Mix / Acadêmico) <span class="item-badge">C# / SQL Server</span></div>
+          <div class="item-date">Certificação Concluída</div>
+        </div>
+        <ul class="item-bullets">
+          <li>Desenvolvimento de softwares em <strong>C#</strong> com POO, manipulação de coleções, LINQ e acesso a dados via ADO.NET / ORM conectado a instâncias de SQL Server.</li>
+          <li>Elaboração de scripts SQL: modelagem de tabelas com constraints, chaves estrangeiras, índices e consultas com múltiplos <code>JOINs</code> e agregações.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Formação Acadêmica & Certificações</div>
+      <div class="item-block">
+        <div class="item-header">
+          <div class="item-title">Bacharelado em Engenharia de Software — UniEVANGÉLICA (Anápolis, GO)</div>
+          <div class="item-date">Fev 2025 – Dez 2028 (Previsão) · 4º Período</div>
+        </div>
+        <div class="item-subtitle">Vice-Presidente do Diretório Acadêmico CodeUp · Coautor de artigo científico submetido à IEEE TSE</div>
+      </div>
+      <div class="item-block">
+        <div class="item-header">
+          <div class="item-title">Programador Desktop — Trilha de Certificação — Instituto Mix</div>
+          <div class="item-date">Out 2022 – Jun 2024 (Concluído)</div>
+        </div>
+        <div class="item-subtitle">Certificações: C# (Mód. 1–2), Banco de Dados Relacional e SQL, Java (Mód. 1–2), POO e UML</div>
+      </div>
+      <div class="skill-row" style="margin-top: 8px;">
+        <span class="skill-label">Certificações:</span>
+        <span class="skill-val">Scrum Fundamentals Certified (SFC™) — SCRUMstudy (03/2026) · Storytelling — UniEVANGÉLICA (2025)</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Idiomas:</span>
+        <span class="skill-val">Português: Nativo · Inglês: Avançado (Compreensão, escrita técnica e leitura fluente)</span>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

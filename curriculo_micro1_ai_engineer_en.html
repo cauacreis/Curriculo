@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume — Cauã Felype Reis (Junior Software Engineer · AI Systems & Code Evaluation)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #2563eb;
+      --text: #334155;
+      --text-dark: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --bg: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #f8fafc;
+      color: var(--text);
+      line-height: 1.45;
+      font-size: 13px;
+      -webkit-font-smoothing: antialiased;
+      padding: 24px;
+    }
+    .page-container {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--bg);
+      padding: 40px 48px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+    }
+    header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 14px;
+      margin-bottom: 18px;
+    }
+    h1.name {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .title-role {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 18px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .contact-bar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    section { margin-bottom: 18px; }
+    .section-title {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 3px;
+    }
+    p.summary { font-size: 12.8px; line-height: 1.5; text-align: justify; }
+    .skill-row { display: flex; gap: 8px; font-size: 12.2px; margin-bottom: 4px; }
+    .skill-label { font-weight: 700; color: var(--text-dark); min-width: 155px; flex-shrink: 0; }
+    .skill-val { color: var(--text); }
+    .item-block { margin-bottom: 14px; }
+    .item-header { display: flex; justify-content: space-between; align-items: baseline; }
+    .item-title { font-size: 13.5px; font-weight: 700; color: var(--text-dark); }
+    .item-title a { color: var(--text-dark); text-decoration: none; }
+    .item-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent);
+      background: #eff6ff;
+      border: 1px solid #dbeafe;
+      padding: 1px 6px;
+      border-radius: 4px;
+      margin-left: 6px;
+    }
+    .item-date { font-size: 11.5px; font-weight: 500; color: var(--text-muted); }
+    .item-subtitle { font-size: 12px; font-weight: 600; color: var(--text-muted); margin-bottom: 5px; font-style: italic; }
+    ul.item-bullets { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+    ul.item-bullets li {
+      position: relative;
+      padding-left: 14px;
+      font-size: 12.5px;
+      line-height: 1.45;
+      color: var(--text);
+      text-align: justify;
+    }
+    ul.item-bullets li::before {
+      content: "•";
+      position: absolute;
+      left: 2px;
+      color: var(--accent);
+      font-weight: bold;
+    }
+    ul.item-bullets li strong { color: var(--text-dark); font-weight: 600; }
+    @media print {
+      body { background: #fff; padding: 0; font-size: 12px; }
+      .page-container { max-width: 100%; padding: 0; box-shadow: none; border-radius: 0; }
+      .no-print { display: none !important; }
+      a { text-decoration: none; color: inherit !important; }
+    }
+    .actions-bar {
+      max-width: 860px;
+      margin: 0 auto 14px auto;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .btn {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+</style>
+</head>
+<body>
+  <div class="actions-bar no-print">
+    <button class="btn" onclick="window.print()">🖨️ Print / Save to PDF</button>
+  </div>
+  <div class="page-container">
+    <header>
+      <h1 class="name">Cauã Felype Caetano Reis</h1>
+      <div class="title-role">Junior Software Engineer · AI Systems & Code Evaluation · Polyglot Developer</div>
+      <div class="contact-bar">
+        <div>📍 Itaguaru, GO — Brazil (Remote / Worldwide)</div>
+        <div>📞 +55 (62) 9 9452-1953</div>
+        <div>✉️ <a href="mailto:caua.reis.dev@gmail.com">caua.reis.dev@gmail.com</a></div>
+        <div>🔗 <a href="https://linkedin.com/in/cauafelypereis" target="_blank">linkedin.com/in/cauafelypereis</a></div>
+        <div>💻 <a href="https://github.com/cauacreis" target="_blank">github.com/cauacreis</a></div>
+        <div>🌐 English: Advanced</div>
+      </div>
+    </header>
+
+    <section>
+      <div class="section-title">Professional Summary</div>
+      <p class="summary">
+        Junior Software Engineer and researcher with a proven background in <strong>system architecture, algorithmic correctness, and AI model evaluation</strong>. Co-author of an advanced scientific research paper submitted to the <strong>IEEE Transactions on Software Engineering (IEEE TSE)</strong> focused on Explainable AI (XAI/SHAP), Multi-Agent Systems (MAS), and Human-in-the-Loop (HITL) active learning. Polyglot practitioner fluent across <strong>Python, Java 21, C, TypeScript, and SQL</strong>, ranging from bare-metal x86 microkernel development to 24/7 high-concurrency production microservices. Experienced in designing rigorous test suites, edge-case analysis, reference solutions, and evaluating code quality, architectural trade-offs, and LLM reasoning. Advanced technical English proficiency.
+      </p>
+    </section>
+
+    <section>
+      <div class="section-title">Core Competencies & Code Evaluation Skills</div>
+      <div class="skill-row"><span class="skill-label">Code Review & Quality:</span><span class="skill-val">Syntax verification, time/space complexity analysis (Big-O), design patterns, bug triage, edge-case discovery, defensive programming, static analysis</span></div>
+      <div class="skill-row"><span class="skill-label">AI & Model Evaluation:</span><span class="skill-val">Explainable AI (XAI via SHAP), Human-in-the-Loop (HITL) workflows, benchmark creation, LLM reasoning audit, prompt evaluation, multi-agent orchestration</span></div>
+      <div class="skill-row"><span class="skill-label">Languages:</span><span class="skill-val">Python 3.11+, Java 21/17, C, TypeScript/JavaScript, SQL (PostgreSQL, MySQL), Assembly (x86 GAS)</span></div>
+      <div class="skill-row"><span class="skill-label">System Architecture:</span><span class="skill-val">Distributed Microservices, AsyncIO Event Loops, Concurrency & Virtual Threads, WebSocket Streaming, RESTful APIs, OOP, Clean Code</span></div>
+      <div class="skill-row"><span class="skill-label">Testing & Tooling:</span><span class="skill-val">Unit Testing, PyTest, JUnit, Test Case Synthesis, Git/GitHub, Docker, Linux, CI/CD Actions</span></div>
+    </section>
+
+    <section>
+      <div class="section-title">Relevant Experience & Research</div>
+      
+      <div class="item-block">
+        <div class="item-header">
+          <div class="item-title">OrenAI — GeoAI Platform & Scientific Research (IEEE TSE Paper) <span class="item-badge">XAI / SHAP</span></div>
+          <div class="item-date">github.com/cauacreis/OrenAI</div>
+        </div>
+        <div class="item-subtitle">Technical Lead & AI Architecture Researcher</div>
+        <ul class="item-bullets">
+          <li><strong>Model Evaluation & Explainable AI (XAI):</strong> Co-developed an ML framework combining Gradient Boosting (XGBoost/LightGBM) with CNNs, implementing <strong>SHAP (SHapley Additive exPlanations)</strong> to mathematically deconstruct 100% of model feature attributions, eliminating black-box outputs.</li>
+          <li><strong>Human-in-the-Loop (HITL) Active Learning:</strong> Architected feedback loops allowing human domain experts to evaluate, validate, or reject model inference, routing flagged samples to an active learning pipeline for incremental retraining.</li>
+          <li><strong>IEEE TSE Publication:</strong> Co-authored a full-length technical paper submitted to <em>IEEE Transactions on Software Engineering</em>, authoring architectural specifications, mathematical formalizations, and benchmarking methodology.</li>
+        </ul>
+      </div>
+
+      <div class="item-block">
+        <div class="item-header">
+          <div class="item-title">SKZ Trading — Production Algorithmic Trading Platform (24/7) <span class="item-badge">Production 24/7</span></div>
+          <div class="item-date">Jul 2026 – Present | skztrading.com</div>
+        </div>
+        <div class="item-subtitle">Software Architect & Backend Developer</div>
+        <ul class="item-bullets">
+          <li><strong>Asynchronous Execution & Reliability:</strong> Engineered 11 asynchronous Python microservices (<code>asyncio</code>, <code>aiohttp</code>) operating continuously on Linux VPS with 99.9% uptime, processing real-time market data under sub-100ms latency.</li>
+          <li><strong>Defensive Logic & Edge Cases:</strong> Developed a proprietary multi-layer liquidity scoring algorithm (0–100) with strict margin verification floors, ensuring zero transactions execute below cost thresholds under volatile market conditions.</li>
+          <li><strong>Security Hardening:</strong> Conducted rigorous OWASP Top 10 code audits, migrating asymmetric key decryption (Ed25519/AES) locally to eliminate plain-text key exposure in API payloads.</li>
+        </ul>
+      </div>
+
+      <div class="item-block">
+        <div class="item-header">
+          <div class="item-title">MicroOS — x86 32-bit Microkernel Written from Scratch in C <span class="item-badge">C / Systems</span></div>
+          <div class="item-date">github.com/cauacreis/MicroOS</div>
+        </div>
+        <div class="item-subtitle">Systems Programmer</div>
+        <ul class="item-bullets">
+          <li>Designed and verified a 32-bit operating system kernel from scratch (C & Assembly), implementing two-level paging, Ring 3 isolation, preemptive round-robin scheduling (PIT 100Hz), and IPC message queues.</li>
+          <li>Demonstrated mastery over fundamental low-level computing: memory allocation, context switching, interrupt handlers (IDT), and hardware-level debugging under QEMU.</li>
+        </ul>
+      </div>
+
+      <div class="item-block">
+        <div class="item-header">
+          <div class="item-title">CoreSync CRM & NexoTrade-OS — High-Concurrency Java 21 Architectures <span class="item-badge">Java 21</span></div>
+          <div class="item-date">github.com/cauacreis/CoreSync-CRM</div>
+        </div>
+        <div class="item-subtitle">Backend Engineer</div>
+        <ul class="item-bullets">
+          <li><strong>CoreSync CRM:</strong> Built multi-tenant B2B platform with Spring Boot 3.2 and Java 21, utilizing Spring AOP for non-intrusive domain auditing and strict logical tenant isolation.</li>
+          <li><strong>NexoTrade-OS:</strong> Implemented real-time Binance WebSocket streaming with Java 21 Virtual Threads, executing autonomous statistical arbitrage (SMA-50) with automated unit test suites.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Education, Leadership & Certifications</div>
+      <div class="item-block">
+        <div class="item-header">
+          <div class="item-title">B.S. in Software Engineering — UniEVANGÉLICA (Anápolis, GO, Brazil)</div>
+          <div class="item-date">Feb 2025 – Dec 2028 (Expected) · 4th Semester</div>
+        </div>
+        <div class="item-subtitle">Vice-President, CodeUp Academic Directory · Finalist, Start Agro Innovation 2025</div>
+      </div>
+      <div class="skill-row" style="margin-top: 8px;">
+        <span class="skill-label">Certifications:</span>
+        <span class="skill-val">Scrum Fundamentals Certified (SFC™) — SCRUMstudy (03/2026) · Technical Storytelling — UniEVANGÉLICA (2025)</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Languages:</span>
+        <span class="skill-val">English: Advanced (Scientific academic writing, technical decision explanations, verbal fluency) · Portuguese: Native</span>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

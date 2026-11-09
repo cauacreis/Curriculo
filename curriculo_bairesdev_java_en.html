@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume — Cauã Felype Reis (Junior Java Developer)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #2563eb;
+      --text: #334155;
+      --text-dark: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --bg: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #f8fafc;
+      color: var(--text);
+      line-height: 1.45;
+      font-size: 13px;
+      -webkit-font-smoothing: antialiased;
+      padding: 24px;
+    }
+    .page-container {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--bg);
+      padding: 40px 48px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+    }
+    header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 14px;
+      margin-bottom: 18px;
+    }
+    h1.name {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .title-role {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 18px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .contact-bar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    section { margin-bottom: 18px; }
+    .section-title {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 3px;
+    }
+    p.summary { font-size: 12.8px; line-height: 1.5; text-align: justify; }
+    .skill-row { display: flex; gap: 8px; font-size: 12.2px; margin-bottom: 4px; }
+    .skill-label { font-weight: 700; color: var(--text-dark); min-width: 145px; flex-shrink: 0; }
+    .skill-val { color: var(--text); }
+    .item-block { margin-bottom: 14px; }
+    .item-header { display: flex; justify-content: space-between; align-items: baseline; }
+    .item-title { font-size: 13.5px; font-weight: 700; color: var(--text-dark); }
+    .item-title a { color: var(--text-dark); text-decoration: none; }
+    .item-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent);
+      background: #eff6ff;
+      border: 1px solid #dbeafe;
+      padding: 1px 6px;
+      border-radius: 4px;
+      margin-left: 6px;
+    }
+    .item-date { font-size: 11.5px; font-weight: 500; color: var(--text-muted); }
+    .item-subtitle { font-size: 12px; font-weight: 600; color: var(--text-muted); margin-bottom: 5px; font-style: italic; }
+    ul.item-bullets { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+    ul.item-bullets li {
+      position: relative;
+      padding-left: 14px;
+      font-size: 12.5px;
+      line-height: 1.45;
+      color: var(--text);
+      text-align: justify;
+    }
+    ul.item-bullets li::before {
+      content: "•";
+      position: absolute;
+      left: 2px;
+      color: var(--accent);
+      font-weight: bold;
+    }
+    ul.item-bullets li strong { color: var(--text-dark); font-weight: 600; }
+    @media print {
+      body { background: #fff; padding: 0; font-size: 12px; }
+      .page-container { max-width: 100%; padding: 0; box-shadow: none; border-radius: 0; }
+      .no-print { display: none !important; }
+      a { text-decoration: none; color: inherit !important; }
+    }
+    .actions-bar {
+      max-width: 860px;
+      margin: 0 auto 14px auto;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .btn {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+</style>
+</head>
+<body>
+  <div class="actions-bar no-print">
+    <button class="btn" onclick="window.print()">🖨️ Print / Save to PDF</button>
+  </div>
+  <div class="page-container">
+    <header>
+      <h1 class="name">Cauã Felype Caetano Reis</h1>
+      <div class="title-role">Junior Java Developer · Systems Architecture · Backend Engineer</div>
+      <div class="contact-bar">
+        <div>📍 Itaguaru, GO — Brazil</div>
+        <div>📞 +55 (62) 9 9452-1953</div>
+        <div>✉️ <a href="mailto:caua.reis.dev@gmail.com">caua.reis.dev@gmail.com</a></div>
+        <div>🔗 <a href="https://linkedin.com/in/cauafelypereis" target="_blank">linkedin.com/in/cauafelypereis</a></div>
+        <div>💻 <a href="https://github.com/cauacreis" target="_blank">github.com/cauacreis</a></div>
+        <div>🌐 English: Advanced</div>
+      </div>
+    </header>
+
+    <section>
+      <div class="section-title">Professional Summary</div>
+      <p class="summary">
+        Software Engineering undergraduate (4th semester @ UniEVANGÉLICA) with deep hands-on expertise in <strong>Java 21</strong>, <strong>Spring Boot 3</strong>, <strong>Virtual Threads</strong>, Object-Oriented Programming (OOP), and asynchronous architectures. Co-author of a scientific research paper submitted to the <strong>IEEE Transactions on Software Engineering (IEEE TSE)</strong>. Proven track record of building and maintaining production-grade systems, including high-concurrency real-time WebSocket engines, multi-tenant enterprise backends, and low-level system software. Strong foundational knowledge of data structures, algorithms, relational databases (SQL), and clean code principles. Advanced professional English proficiency.
+      </p>
+    </section>
+
+    <section>
+      <div class="section-title">Technical Skills</div>
+      <div class="skill-row"><span class="skill-label">Languages:</span><span class="skill-val">Java 21/17/11, Python 3.11+, C, TypeScript, SQL</span></div>
+      <div class="skill-row"><span class="skill-label">Java & Backend:</span><span class="skill-val">Spring Boot 3.x, Spring Security, Spring Data JPA, Java 21 Virtual Threads, WebSockets, RESTful APIs, OOP, Design Patterns, Multithreading, Clean Architecture, H2 In-Memory</span></div>
+      <div class="skill-row"><span class="skill-label">Databases & SQL:</span><span class="skill-val">PostgreSQL, MySQL, SQL Server, Redis, Database Modeling, Optimistic Locking (@Version)</span></div>
+      <div class="skill-row"><span class="skill-label">DevOps & Tools:</span><span class="skill-val">Git, GitHub, Docker, Docker Compose, Linux/VPS, Maven, CI/CD (GitHub Actions), Nginx, PM2</span></div>
+      <div class="skill-row"><span class="skill-label">Methodologies:</span><span class="skill-val">Scrum (Scrum Fundamentals Certified - SFC™), Agile, OWASP Top 10 Hardening, Algorithmic Problem Solving</span></div>
+    </section>
+
+    <section>
+      <div class="section-title">Software Engineering Experience & Projects</div>
+      
+      <div class="item-block">
+        <div class="item-header">
+          <div class="item-title">CoreSync CRM — Enterprise B2B Multi-Tenant Platform <span class="item-badge">Java 21 / Spring Boot 3</span></div>
+          <div class="item-date">github.com/cauacreis/CoreSync-CRM</div>
+        </div>
+        <div class="item-subtitle">Backend Java Engineer</div>
+        <ul class="item-bullets">
+          <li><strong>Multi-Tenant Architecture:</strong> Engineered an enterprise SaaS backend using <strong>Java 21</strong> and <strong>Spring Boot 3.2</strong>, implementing strict logical tenant isolation with <code>TenantContext</code> via <code>ThreadLocal</code> extraction from custom JWT claims.</li>
+          <li><strong>Spring AOP Audit Vault:</strong> Designed clean domain logic leveraging <strong>Spring AOP (Aspect-Oriented Programming)</strong> to automatically intercept and persist critical business operations without cluttering business services.</li>
+          <li><strong>Persistence & Performance:</strong> Structured relational models with Spring Data JPA/Hibernate, implemented pagination, in-memory caching, and global IP rate limiting via Bucket4j.</li>
+        </ul>
+      </div>
+
+      <div class="item-block">
+        <div class="item-header">
+          <div class="item-title">NexoTrade-OS — High-Concurrency Financial Trading Engine <span class="item-badge">Java 21 / Virtual Threads</span></div>
+          <div class="item-date">github.com/cauacreis/NexoTrade-OS</div>
+        </div>
+        <div class="item-subtitle">Java Backend Architect</div>
+        <ul class="item-bullets">
+          <li><strong>Real-Time Stream Processing:</strong> Built a high-throughput paper trading engine consuming live WebSocket tick streams from the Binance exchange, processing continuous market quotes with sub-millisecond response times.</li>
+          <li><strong>Virtual Threads Concurrency:</strong> Leveraged <strong>Java 21 Virtual Threads (Project Loom)</strong> to offload real-time persistence and order execution asynchronously without blocking the core WebSocket stream handler.</li>
+          <li><strong>Algorithmic Execution:</strong> Implemented an autonomous algorithmic trading module based on Simple Moving Average (SMA-50) volatility triggers with unit test coverage.</li>
+        </ul>
+      </div>
+
+      <div class="item-block">
+        <div class="item-header">
+          <div class="item-title">SKZ Trading — Production Digital Asset Arbitrage Platform <span class="item-badge">Production 24/7</span></div>
+          <div class="item-date">Jul 2026 – Present | skztrading.com</div>
+        </div>
+        <div class="item-subtitle">Full-Stack & Backend Architect</div>
+        <ul class="item-bullets">
+          <li><strong>Microservices Architecture:</strong> Architected and deployed 11 asynchronous Python microservices running 24/7 on Linux VPS, interfacing with high-volume external REST APIs with 99.9% uptime and sub-100ms response latency.</li>
+          <li><strong>Financial Automation & Security:</strong> Implemented automated reconciliation with safety margin floors preventing negative sales, paired with Ed25519/AES local cryptographic key security alined to OWASP Top 10.</li>
+        </ul>
+      </div>
+
+      <div class="item-block">
+        <div class="item-header">
+          <div class="item-title">MicroOS — Educational x86 32-bit Microkernel from Scratch <span class="item-badge">C / Systems</span></div>
+          <div class="item-date">github.com/cauacreis/MicroOS</div>
+        </div>
+        <div class="item-subtitle">Systems Programmer</div>
+        <ul class="item-bullets">
+          <li>Implemented a 32-bit x86 microkernel in C and Assembly (GAS) running on QEMU, featuring two-level virtual memory paging, Ring 3 userland process isolation, single-frame context switching, and a preemptive round-robin scheduler driven by a 100 Hz PIT timer.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Education & Certifications</div>
+      <div class="item-block">
+        <div class="item-header">
+          <div class="item-title">B.S. in Software Engineering — UniEVANGÉLICA (Anápolis, GO, Brazil)</div>
+          <div class="item-date">Feb 2025 – Dec 2028 (Expected) · 4th Semester</div>
+        </div>
+        <div class="item-subtitle">Vice-President, CodeUp Academic Directory · Co-author of research paper submitted to IEEE TSE</div>
+      </div>
+      <div class="item-block">
+        <div class="item-header">
+          <div class="item-title">Desktop Programmer Certification Track — Instituto Mix</div>
+          <div class="item-date">Oct 2022 – Jun 2024 (Completed)</div>
+        </div>
+        <div class="item-subtitle">Certifications: Java (Modules 1–2), C# (Modules 1–2), Relational Databases (SQL), OOP, and UML</div>
+      </div>
+      <div class="skill-row" style="margin-top: 8px;">
+        <span class="skill-label">Certifications:</span>
+        <span class="skill-val">Scrum Fundamentals Certified (SFC™) — SCRUMstudy (03/2026) · Technical Storytelling — UniEVANGÉLICA (2025)</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Languages:</span>
+        <span class="skill-val">English: Advanced · Portuguese: Native · Spanish: Basic</span>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
