@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Currículo — Cauã Felype Reis (Desenvolvimento de Sistemas Corporativos & ERP · Tecmaster)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0b1f3f;
+      --accent: #0070ba;
+      --text: #2d3748;
+      --text-dark: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --bg: #ffffff;
+      --tag-bg: #f8fafc;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #f8fafc;
+      color: var(--text);
+      line-height: 1.44;
+      font-size: 12px;
+      -webkit-font-smoothing: antialiased;
+      padding: 16px;
+    }
+    .page-container {
+      max-width: 840px;
+      margin: 0 auto;
+      background: var(--bg);
+      padding: 36px 44px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      border-radius: 6px;
+    }
+    header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 12px;
+      margin-bottom: 14px;
+    }
+    h1.name {
+      font-size: 23px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+    .title-role {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      font-size: 11.5px;
+      color: var(--text-muted);
+    }
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .contact-item a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact-item a:hover {
+      color: var(--accent);
+    }
+    section {
+      margin-bottom: 14px;
+    }
+    h2.section-title {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--primary);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 3px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    h2.section-title::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 12px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    p.summary {
+      color: var(--text);
+      text-align: justify;
+      margin-bottom: 5px;
+      font-size: 11.5px;
+      line-height: 1.45;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7px 14px;
+      margin-top: 4px;
+    }
+    .skill-card {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 6px 10px;
+    }
+    .skill-card-title {
+      font-weight: 700;
+      color: var(--text-dark);
+      font-size: 11.5px;
+      margin-bottom: 3px;
+    }
+    .skill-card-desc {
+      font-size: 11px;
+      color: var(--text-muted);
+      line-height: 1.35;
+    }
+    .job-item {
+      margin-bottom: 11px;
+      page-break-inside: avoid;
+    }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+    .job-title {
+      font-weight: 700;
+      color: var(--text-dark);
+      font-size: 12.5px;
+    }
+    .job-badge {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 600;
+      color: var(--accent);
+      background: #e0f2fe;
+      border: 1px solid #bae6fd;
+      padding: 1px 6px;
+      border-radius: 3px;
+      margin-left: 5px;
+    }
+    .job-company {
+      font-weight: 600;
+      color: var(--accent);
+      font-size: 12px;
+    }
+    .job-period {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .job-desc {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-bottom: 4px;
+    }
+    ul.bullet-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    ul.bullet-list li {
+      position: relative;
+      padding-left: 14px;
+      margin-bottom: 3px;
+      font-size: 11.2px;
+      color: var(--text);
+      line-height: 1.38;
+      text-align: justify;
+    }
+    ul.bullet-list li::before {
+      content: "•";
+      position: absolute;
+      left: 3px;
+      color: var(--accent);
+      font-weight: bold;
+    }
+    ul.bullet-list li strong {
+      color: var(--text-dark);
+    }
+    .edu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 3px;
+    }
+    .edu-title {
+      font-weight: 700;
+      color: var(--text-dark);
+      font-size: 12px;
+    }
+    .edu-school {
+      font-weight: 600;
+      color: var(--accent);
+      font-size: 11.5px;
+    }
+    .edu-period {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+    .edu-details {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      background: #f1f5f9;
+      padding: 1px 4px;
+      border-radius: 3px;
+    }
+    .page-break {
+      page-break-before: always;
+    }
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+      .page-container {
+        padding: 0;
+        box-shadow: none;
+        max-width: 100%;
+      }
+      .job-item {
+        page-break-inside: avoid;
+      }
+      @page {
+        margin: 12mm 14mm;
+        size: A4 portrait;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-container">
+    <!-- PÁGINA 1 -->
+    <header>
+      <h1 class="name">Cauã Felype Caetano Reis</h1>
+      <div class="title-role">Desenvolvedor de Sistemas Corporativos & ERP · Java 21 / Integrações / SQL</div>
+      <div class="contact-bar">
+        <span class="contact-item">📍 Goiás — Brasil</span>
+        <span class="contact-item">📞 (62) 9 9452-1953</span>
+        <span class="contact-item">✉️ <a href="mailto:caua.reis.dev@gmail.com">caua.reis.dev@gmail.com</a></span>
+        <span class="contact-item">🔗 <a href="https://linkedin.com/in/cauafelypereis">linkedin.com/in/cauafelypereis</a></span>
+        <span class="contact-item">💻 <a href="https://github.com/cauacreis">github.com/cauacreis</a></span>
+        <span class="contact-item">🌐 <a href="https://gymflow-weld.vercel.app">Portfólio / Vercel</a></span>
+      </div>
+    </header>
+
+    <section>
+      <h2 class="section-title">Objetivo Profissional</h2>
+      <p class="summary">
+        Atuar no ecossistema de <strong>Desenvolvimento de Sistemas Corporativos & ERP na Tecmaster</strong>, aplicando sólida base em arquitetura de software, integração de sistemas empresariais e cloud, modelagem transacional de dados (SQL) e rigor em boas práticas de engenharia corporativa (Java, ecossistema SAP/ABAP, metodologias ágeis) para entrega de soluções corporativas de alta disponibilidade.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="section-title">Resumo Profissional</h2>
+      <p class="summary">
+        Engenheiro de Software (4º período na UniEVANGÉLICA) com histórico comprovado de concepção, modelagem e entrega de sistemas empresariais concorrentes, plataformas de conciliação financeira e ecossistemas corporativos multi-tenant. Desenvolvedor e arquiteto de soluções com sólida experiência em integração entre aplicações (APIs RESTful, WebSockets, filas assíncronas), bancos de dados relacionais com transações ACID (PostgreSQL, MySQL, SQL Server) e arquiteturas baseadas em regras de negócio complexas. Perfil analítico, disciplinado em documentação técnica e padronização de processos, com rápida curva de aprendizado em linguagens e tecnologias corporativas proprietárias (SAP S/4HANA, ABAP, SAPUI5). Certificado Scrum (SFC™) e com proficiência em inglês técnico para atuação em equipes globais.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="section-title">Habilidades Técnicas & Metodológicas</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-card-title">🏢 Sistemas Empresariais & ERP</div>
+          <div class="skill-card-desc">Arquitetura Multi-Tenant com isolamento de dados, desenho de processos corporativos (faturamento, conciliação, inventário, auditoria), análise de requisitos funcionais e integração com ERPs.</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-title">☕ Linguagens & Back-end Corporativo</div>
+          <div class="skill-card-desc">Java 21 (Spring Boot 3, Hibernate/JPA, Virtual Threads), C#, SQL avançado (Stored Procedures, Índices, DDL/DML), TypeScript, Python 3.11+, C (baixo nível).</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-title">🔗 Integração & Arquitetura de Software</div>
+          <div class="skill-card-desc">Integração de sistemas via REST APIs, Webhooks, WebSockets em tempo real, mensageria assíncrona, microsserviços e Arquitetura Hexagonal (Clean Code).</div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-title">💾 Bancos de Dados & Governança</div>
+          <div class="skill-card-desc">PostgreSQL, MySQL, SQL Server, Redis, SQLite com padrão Outbox, modelagem relacional normalizada, transações atômicas ACID e controle de concorrência (<code>@Version</code>).</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Experiência Profissional & Sistemas em Produção</h2>
+
+      <div class="job-item">
+        <div class="job-header">
+          <div>
+            <span class="job-title">Full-Stack Developer & Arquiteto de Software</span> — <span class="job-company">SKZ Trading</span>
+            <span class="job-badge">Produção 24/7</span>
+          </div>
+          <span class="job-period">Jul 2026 – Presente</span>
+        </div>
+        <div class="job-desc">Plataforma SaaS corporativa de alta frequência para liquidação e conciliação financeira automatizada de ativos</div>
+        <ul class="bullet-list">
+          <li><strong>Integração e Orquestração de Microsserviços:</strong> Arquitetei e implantei 11 microsserviços integrados a APIs de parceiros corporativos (DMarket v2 e Mercado Pago), gerenciando pipelines assíncronos com orquestração via PM2 em ambiente Linux/VPS.</li>
+          <li><strong>Conciliação Financeira & Módulo de Faturamento:</strong> Desenvolvi pipeline transacional automatizado com cálculo de split de comissionamento sobre lucro líquido (30%), conciliação bancária instantânea via webhooks PIX e trava de crédito automática por inadimplência.</li>
+          <li><strong>Integridade Transacional & Banco Relacional:</strong> Modelei esquema relacional em MySQL com transações atômicas ACID, índices otimizados para consultas de alta concorrência e algoritmos de auditoria financeira com 99,9% de uptime mantido.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PÁGINA 2 -->
+    <div class="page-break"></div>
+
+    <section style="margin-top: 10px;">
+      <h2 class="section-title">Projetos Corporativos & Engenharia de Sistemas</h2>
+
+      <div class="job-item">
+        <div class="job-header">
+          <div>
+            <span class="job-title">CoreSync CRM & ERP Multi-Tenant</span>
+            <span class="job-badge">Java 21 / Spring Boot 3</span>
+          </div>
+          <span class="job-period">2026</span>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>Isolamento de Dados Multi-Tenant:</strong> Projetei plataforma corporativa B2B em Spring Boot 3.2 e Java 21, implementando partição segura de inquilinos em memória via <code>TenantContext</code> ancorado no token JWT e integridade relacional.</li>
+          <li><strong>Auditoria e Governança com Spring AOP:</strong> Desenvolveu camada de interceptação declarativa (Aspect-Oriented Programming) para auditoria completa de transações, registrando logs de auditoria de alterações em tabelas sensíveis sem acoplamento no código de negócio.</li>
+          <li><strong>Design de Soluções & Resiliência:</strong> Aplicação de Virtual Threads (Java 21 Project Loom) para tratamento massivo de requisições corporativas simultâneas e mensageria de integração em tempo real.</li>
+        </ul>
+      </div>
+
+      <div class="job-item">
+        <div class="job-header">
+          <div>
+            <span class="job-title">Bodega do Vidigal — Sistema de Ponto de Venda (POS) & Ordem de Produção (KDS)</span>
+            <span class="job-badge">React Native / SQLite</span>
+          </div>
+          <span class="job-period">2026</span>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>Padrão Outbox & Resiliência Transacional:</strong> Modelei banco de dados local SQLite implementando o padrão de resiliência <em>Outbox pattern</em>, assegurando persistência atômica e zero duplicidade de registros contábeis/fiscais de pedidos mesmo em falhas de conectividade.</li>
+          <li><strong>Fila de Execução FIFO & 37 Testes Automatizados:</strong> Desenvolveu esteira com 37 testes automatizados validando o ciclo de vida de processamento de pedidos por ordem de prioridade cronológica (FIFO) e regras de negócio de fechamento de turno.</li>
+        </ul>
+      </div>
+
+      <div class="job-item">
+        <div class="job-header">
+          <div>
+            <span class="job-title">OrenAI — Plataforma B2B Mineral & Artigo Científico (IEEE TSE)</span>
+            <span class="job-badge">Pesquisa / MAS</span>
+          </div>
+          <span class="job-period">2025 – Presente</span>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>Engenharia de Requisitos & Modelagem Formal:</strong> Coautor de artigo científico submetido à conceituada revista <em>IEEE Transactions on Software Engineering</em>, responsável pela documentação técnica, modelagem de dados e diagramação de arquitetura de software distribuído.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Formação Acadêmica & Certificações</h2>
+      <div class="edu-item">
+        <div>
+          <span class="edu-title">Bacharelado em Engenharia de Software</span> — <span class="edu-school">UniEVANGÉLICA</span>
+        </div>
+        <span class="edu-period">4º Período | Previsão: 2027</span>
+      </div>
+      <div class="edu-details">
+        • Vice-Presidente do Diretório Acadêmico CodeUp | Foco em Engenharia de Requisitos, Bancos de Dados e Modelagem de Software.
+      </div>
+      <div class="edu-item" style="margin-top: 8px;">
+        <div>
+          <span class="edu-title">Programador Desktop (C#, Java, SQL, UML)</span> — <span class="edu-school">Instituto Mix</span>
+        </div>
+        <span class="edu-period">Out 2022 – Jun 2024</span>
+      </div>
+      <div class="edu-details">
+        • Formação prática intensiva em Lógica Orientada a Objetos, Modelagem Relacional e Desenvolvimento Corporativo.
+      </div>
+      <div class="edu-details" style="margin-top: 8px;">
+        • <strong>Certificações:</strong> Scrum Fundamentals Certified (SFC™) · Storytelling e Comunicação Técnica.
+      </div>
+      <div class="edu-details" style="margin-top: 4px;">
+        • <strong>Idiomas:</strong> Português (Nativo) · Inglês (Avançado — Leitura técnica, escrita de documentações e conversação profissional).
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
