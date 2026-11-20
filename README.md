@@ -33,6 +33,10 @@ Abaixo estão todas as versões segmentadas por mercado, stack e oportunidade. C
 | Segmento / Vaga | Foco Técnico Principal | Idioma | 📥 Download PDF | 📝 Fonte Markdown |
 |---|---|:---:|:---:|:---:|
 | **Currículo Geral (Carro-Chefe)** | Node.js/Express, Python, Java 21, C#, React/Next.js/React Native, NASA Space Apps / AI Agents | PT-BR | [Baixar PDF](./Curriculo_Caua_Felype_Reis_Geral.pdf) | [Ver Markdown](./CURRICULO_CAUA_REIS.md) |
+| **Askable — Software Engineer (AI Coding Tasks)** | Python, TypeScript/Node.js, Java 21, C, 925 Test Assertions, AI Evals & Docker | EN-US | [Baixar PDF](./Caua_Reis_Software_Engineer_AI_Tasks_Askable_EN.pdf) | [Ver Markdown](./CURRICULO_ASKABLE_AI_CODING_TASKS_EN.md) |
+| **Flex — Software Engineer (AI-Native Fintech)** | TypeScript, Node.js, PostgreSQL, React/Next.js, PIX Payments & Multi-Agent AI | EN-US | [Baixar PDF](./Caua_Reis_Software_Engineer_Flex_EN.pdf) | [Ver Markdown](./CURRICULO_FLEX_SOFTWARE_ENGINEER_EN.md) |
+| **Wellhub — Mid-level Software Engineer (Node.js/TS)** | Node.js/Express, TypeScript, Multi-API ETL, PostgreSQL/MySQL, GymFlow Domain Fit | EN-US | [Baixar PDF](./Caua_Reis_Software_Engineer_Wellhub_EN.pdf) | [Ver Markdown](./CURRICULO_WELLHUB_NODE_TS_SWE_EN.md) |
+| **Asaas — Eng. de Software Full Stack Pleno** | TypeScript, Node.js, Java 21/Spring Boot 3, PostgreSQL, PIX/Webhooks & Testes | PT-BR | [Baixar PDF](./Caua_Reis_Engenheiro_FullStack_Asaas_PT.pdf) | [Ver Markdown](./CURRICULO_ASAAS_FULLSTACK_PT.md) |
 | **FIAP — Desenvolvedor(a) .NET** | C#, .NET 8–10, EF Core, SQL Server, AI Codex, Worker Services | PT-BR | [Baixar PDF](./Caua_Reis_Desenvolvedor_DotNet_FIAP.pdf) | [Ver Markdown](./CURRICULO_FIAP_DOTNET_C_SHARP_PT.md) |
 | **NTT DATA — Dev ERP & Sistemas** | Java 21, ERP Multi-Tenant, SQL, Arquitetura Hexagonal | PT-BR | [Baixar PDF](./Caua_Reis_Dev_Sistemas_ERP_NTT_Data.pdf) | [Ver Markdown](./CURRICULO_NTT_DATA_SAP_ERP_PT.md) |
 | **Tecmaster — Dev SAP ABAP & ERP** | SAP ABAP, ERP Multi-Tenant, Java 21, SQL, Fiori | PT-BR | [Baixar PDF](./Caua_Reis_Desenvolvedor_SAP_ABAP_Tecmaster.pdf) | [Ver Markdown](./CURRICULO_TECMASTER_SAP_ABAP_PT.md) |

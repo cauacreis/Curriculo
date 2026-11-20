@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume — Cauã Felype Caetano Reis (Software Engineer · Flex)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #2563eb;
+      --text: #334155;
+      --text-dark: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --bg: #ffffff;
+      --tag-bg: #f1f5f9;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #f8fafc;
+      color: var(--text);
+      line-height: 1.42;
+      font-size: 11.6px;
+      -webkit-font-smoothing: antialiased;
+      padding: 16px;
+    }
+    .page-container {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--bg);
+      padding: 28px 36px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+    }
+    header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+    }
+    h1.name {
+      font-size: 22.5px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+    .title-role {
+      font-size: 12.6px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .title-role span.dot { color: var(--text-muted); font-size: 10px; }
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 14px;
+      font-size: 11.2px;
+      color: var(--text-muted);
+    }
+    .contact-item { display: inline-flex; align-items: center; gap: 4px; }
+    .contact-item a { color: var(--text-muted); text-decoration: none; font-weight: 500; }
+    .contact-item a:hover { color: var(--accent); text-decoration: underline; }
+    section { margin-bottom: 13px; }
+    section:last-child { margin-bottom: 0; }
+    .section-title {
+      font-size: 11.4px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 7px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2.5px;
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+    .section-title::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+    p.summary { color: var(--text); font-size: 11.4px; line-height: 1.44; text-align: justify; }
+    .skills-block { display: flex; flex-direction: column; gap: 4.5px; font-size: 11.2px; }
+    .skill-row { display: flex; gap: 8px; line-height: 1.38; }
+    .skill-label { font-weight: 700; color: var(--text-dark); min-width: 195px; flex-shrink: 0; }
+    .skill-val { color: var(--text); }
+    .item-block {
+      margin-bottom: 11px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .item-block:last-child { margin-bottom: 0; }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 2px;
+    }
+    .item-title { font-size: 12.3px; font-weight: 700; color: var(--text-dark); }
+    .item-title a { color: var(--text-dark); text-decoration: none; }
+    .item-badge {
+      display: inline-block;
+      font-size: 9.8px;
+      font-weight: 600;
+      color: var(--accent);
+      background-color: #eff6ff;
+      border: 1px solid #dbeafe;
+      padding: 0.5px 5.5px;
+      border-radius: 4px;
+      margin-left: 5px;
+      vertical-align: middle;
+    }
+    .item-date { font-size: 10.6px; font-weight: 500; color: var(--text-muted); flex-shrink: 0; white-space: nowrap; }
+    .item-subtitle { font-size: 11px; font-weight: 600; color: var(--text-muted); margin-bottom: 3.5px; }
+    .item-subtitle a { color: var(--accent); text-decoration: none; }
+    ul.item-bullets { list-style-type: none; padding-left: 0; }
+    ul.item-bullets li {
+      position: relative;
+      padding-left: 12px;
+      margin-bottom: 3px;
+      font-size: 11.15px;
+      color: var(--text);
+      line-height: 1.39;
+      text-align: justify;
+    }
+    ul.item-bullets li:last-child { margin-bottom: 0; }
+    ul.item-bullets li::before { content: "•"; position: absolute; left: 2px; color: var(--accent); font-weight: bold; }
+    ul.item-bullets li strong { color: var(--text-dark); font-weight: 600; }
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.7px;
+      background-color: var(--tag-bg);
+      border: 1px solid var(--border);
+      padding: 0.5px 3.5px;
+      border-radius: 3px;
+      color: #0f172a;
+    }
+    @media print {
+      body { background-color: #ffffff; padding: 0; }
+      .page-container { padding: 0; box-shadow: none; max-width: 100%; }
+      .item-block { page-break-inside: avoid; break-inside: avoid; }
+      @page { margin: 9.5mm 11.5mm; size: A4 portrait; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+    <header>
+      <h1 class="name">Cauã Felype Caetano Reis</h1>
+      <div class="title-role">
+        <span>Full-Stack Software Engineer</span>
+        <span class="dot">•</span>
+        <span>TypeScript, Node.js, PostgreSQL &amp; AI-Native Financial Systems</span>
+      </div>
+      <div class="contact-bar">
+        <div class="contact-item">📍 Goiás, Brazil (Remote)</div>
+        <div class="contact-item">📞 +55 (62) 9 9452-1953</div>
+        <div class="contact-item">✉️ <a href="mailto:caua.reis.dev@gmail.com">caua.reis.dev@gmail.com</a></div>
+        <div class="contact-item">🔗 <a href="https://linkedin.com/in/cauafelypereis" target="_blank">linkedin.com/in/cauafelypereis</a></div>
+        <div class="contact-item">💻 <a href="https://github.com/cauacreis" target="_blank">github.com/cauacreis</a></div>
+        <div class="contact-item">🌐 <a href="https://gymflow-weld.vercel.app" target="_blank">Live Portfolio (Vercel)</a></div>
+      </div>
+    </header>
+
+    <section>
+      <div class="section-title">Professional Summary</div>
+      <p class="summary">
+        Product-minded Full-Stack Software Engineer with extreme ownership and a proven track record of shipping end-to-end production systems in <strong>TypeScript, Node.js (Express), React/Next.js, PostgreSQL/Supabase, and Python</strong>. Architect and 24/7 operator of <strong>SKZ Trading</strong>, a live algorithmic asset-trading and PIX financial-settlement SaaS platform maintaining <strong>99.9% uptime</strong> across 200+ completed real-money trades under strict anti-loss safeguards and OWASP security hardening. Creator of <strong>PersonalAgro ("Zé Agro")</strong> at the <strong>NASA Space Apps Challenge</strong>, scaling an AI-native WhatsApp &amp; geospatial web platform (15k+ LOC in Node.js/PostgreSQL, 10 AI agents, 98% degraded-mode payload compression, and <strong>925 automated test assertions</strong>) validated with 26 real end users. Co-author of an <strong>IEEE TSE</strong> scientific paper on Multi-Agent AI (<strong>OrenAI</strong>), comfortable operating rapidly in TypeScript monorepos, cloud containers, and high-velocity trunk-based shipping cadences with advanced English fluency.
+      </p>
+    </section>
+
+    <section>
+      <div class="section-title">Core Technical Stack</div>
+      <div class="skills-block">
+        <div class="skill-row">
+          <span class="skill-label">Core Stack:</span>
+          <span class="skill-val">TypeScript, JavaScript (ESNext), Node.js, Express, React 19/18, Next.js (App Router), Tailwind CSS, Python 3.11+ (FastAPI, AsyncIO), Java 21 (Spring Boot 3)</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Databases &amp; Data Layer:</span>
+          <span class="skill-val">PostgreSQL, Supabase (Auth, RLS, PostGIS), MySQL, SQLite (Local-First / Outbox Pattern), Redis, ACID Transactions, Query Tuning &amp; Schema Design</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">AI &amp; Product Engineering:</span>
+          <span class="skill-val">Multi-Agent Orchestration (Groq, Gemini, Cerebras, OpenAI/Whisper), Automatic Provider Failover, 0-Token Deterministic Guardrails, Context Optimization, RAG, XAI (SHAP), FFmpeg Audio/TTS Pipelines</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Payments &amp; Security:</span>
+          <span class="skill-val">Mercado Pago PIX &amp; Card Webhooks, Automated Commission Split &amp; Credit-Lock Logic, Ed25519 / AES Encryption, OWASP Top 10 Hardening, Dynamic QR Tokens, 2FA</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Cloud, Testing &amp; Velocity:</span>
+          <span class="skill-val">Docker, Docker Compose, Linux/VPS, PM2, Nginx, Vercel, Git/GitHub CI/CD, Automated Testing (<strong>925 assertions</strong> in PersonalAgro, <strong>37 tests</strong> in Jest), Scrum (SFC™)</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Production Systems &amp; Full-Stack Experience</div>
+
+      <div class="item-block">
+        <div class="item-header">
+          <div class="item-title">
+            SKZ Trading (<a href="https://skztrading.com" target="_blank">skztrading.com</a>)
+            <span class="item-badge">24/7 Live Financial SaaS</span>
+          </div>
+          <div class="item-date">Jul 2026 – Present</div>
+        </div>
+        <div class="item-subtitle">Full-Stack Software Engineer &amp; Architect | Real-Money Settlement &amp; Risk Controls</div>
+        <ul class="item-bullets">
+          <li><strong>Real-Money Payment &amp; Commission Pipeline:</strong> Modeled relational MySQL financial ledgers and automated settlement pipelines calculating a 30% net-profit commission with instant reconciliation via <strong>Mercado Pago PIX webhooks</strong> and automated delinquency credit locks.</li>
+          <li><strong>Anti-Loss Risk Engine &amp; 24/7 Execution:</strong> Built 11 asynchronous Python microservices (<code>asyncio</code>, <code>aiohttp</code>) managed via PM2 on Linux VPS, evaluating 4-layer liquidity scores (0–100) with sub-100ms latency, strict 12% buy discounts, 15% net margin targets, and hard-coded anti-loss floors across 200+ live operations (<strong>99.9% uptime</strong>).</li>
+          <li><strong>Executive Dashboard &amp; Security Hardening:</strong> Shipped a real-time React (Vite) + PHP operations console with 2FA QR authentication and local server-side Ed25519/AES encryption adhering to OWASP Top 10 standards.</li>
+        </ul>
+      </div>
+
+      <div class="item-block">
+        <div class="item-header">
+          <div class="item-title">
+            PersonalAgro ("Zé Agro") — AI-Native Full-Stack &amp; Multi-Agent Platform
+            <span class="item-badge">NASA Space Apps Challenge</span>
+          </div>
+          <div class="item-date">2026</div>
+        </div>
+        <div class="item-subtitle">Creator &amp; Full-Stack / AI Engineer | Node.js, Express, Supabase/PostgreSQL, Multi-LLM</div>
+        <ul class="item-bullets">
+          <li><strong>Production-Grade Node.js &amp; PostgreSQL Architecture:</strong> Engineered a 15,000+ LOC codebase across 30 modules with a deterministic crop-rotation engine, <code>/rotacao</code> geospatial dashboard, and <strong>10 REST endpoints</strong> backed by Supabase/PostgreSQL and <strong>925 assertions across 4 automated test suites</strong>.</li>
+          <li><strong>AI Reliability, Latency &amp; Cost Engineering:</strong> Orchestrated <strong>10 specialist agents</strong> and 16 tools with automatic multi-provider failover (Groq, Gemini, Cerebras); combined 0-token deterministic/Levenshtein filters with parallel micro-agents to cut Embrapa RAG context by &gt;55%, tool schemas by up to 75%, and degraded-mode payloads by 98% (<code>24.2k → 493 chars</code>).</li>
+          <li><strong>Zero-Friction Product Delivery &amp; Real Users:</strong> Built a zero-app, zero-login WhatsApp interface (Baileys) featuring an accessible <code>FFmpeg</code> + Whisper/Gemini + phonetic-TTS audio pipeline and anonymous anti-herd-effect safeguards connected to CEASA/cooperatives/CONAB channels, validated end to end by <strong>26 real farmers</strong> alongside live <strong>NASA POWER (<code>GWETROOT</code>)</strong>, <strong>NASA GIBS (MODIS NDVI / SMAP L4)</strong>, Open-Meteo, IBGE SIDRA, and ANP data feeds.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Additional High-Impact Engineering Projects</div>
+
+      <div class="item-block">
+        <div class="item-header">
+          <div class="item-title">
+            GymFlow — Mobile-First SaaS Platform
+            <span class="item-badge">Next.js / TypeScript / Mercado Pago</span>
+          </div>
+          <div class="item-date">Sep 2026</div>
+        </div>
+        <div class="item-subtitle">Full-Stack Product Engineer | <a href="https://gymflow-weld.vercel.app" target="_blank">gymflow-weld.vercel.app</a></div>
+        <ul class="item-bullets">
+          <li>Shipped a full TypeScript / Next.js 14 SaaS on Vercel (Android Play Store ready via Capacitor), integrating Mercado Pago PIX/card checkout, dynamic 30s rotating anti-fraud QR passes, real-time volume/tonnage workout tracking, and a dual-engine deterministic + Gemini AI coach.</li>
+        </ul>
+      </div>
+
+      <div class="item-block">
+        <div class="item-header">
+          <div class="item-title">
+            Bodega do Vidigal — Offline-First P2P POS &amp; KDS
+            <span class="item-badge">React Native / SQLite / 37 Jest Tests</span>
+          </div>
+          <div class="item-date">2026</div>
+        </div>
+        <ul class="item-bullets">
+          <li>Delivered a 100% offline POS &amp; Kitchen Display System syncing via local Wi-Fi P2P WebSockets (&lt;10ms latency), backed by atomic SQLite <strong>Outbox pattern</strong> persistence preventing duplicate orders on abrupt power loss, and verified with <strong>37 automated unit/E2E Jest tests</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="item-block">
+        <div class="item-header">
+          <div class="item-title">
+            OrenAI &amp; CoreSync CRM — AI Research &amp; Multi-Tenant Backend
+            <span class="item-badge">IEEE TSE · Java 21 / Spring Boot 3</span>
+          </div>
+          <div class="item-date">2025 – Present</div>
+        </div>
+        <ul class="item-bullets">
+          <li><strong>OrenAI:</strong> Co-authored a scientific paper submitted to <em>IEEE Transactions on Software Engineering (IEEE TSE)</em>; architected Dockerized MAS/MoE containers, 100% explainable SHAP ML predictions, and Three.js WebGL 3D subsurface visualization.</li>
+          <li><strong>CoreSync CRM &amp; NexoTrade-OS:</strong> Engineered strict JWT <code>ThreadLocal</code> multi-tenant isolation, declarative Spring AOP audit trails, and Binance WebSocket real-time arbitrage using Java 21 Virtual Threads.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Education, Leadership &amp; Certifications</div>
+      <div class="item-block">
+        <div class="item-header">
+          <div class="item-title">B.S. in Software Engineering — UniEVANGÉLICA (Anápolis, GO)</div>
+          <div class="item-date">Feb 2025 – Dec 2028 (Expected)</div>
+        </div>
+        <ul class="item-bullets">
+          <li><strong>4th Semester · Evening classes (100% full-time availability):</strong> Vice-President, CodeUp Academic Directory; Director of Arts &amp; Culture; NASA Space Apps Challenge; Finalist, Start Agro Innovation 2025.</li>
+          <li><strong>Desktop Programmer Track (C#, Java, Relational SQL, OOP, UML) — Instituto Mix (2022–2024):</strong> Practical software and relational database engineering.</li>
+          <li><strong>Certifications &amp; Languages:</strong> Scrum Fundamentals Certified (SFC™ — 03/2026) · Technical Storytelling (2025) · <strong>English: Advanced</strong> · <strong>Portuguese: Native</strong>.</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
