@@ -32,7 +32,7 @@ Abaixo estão todas as versões segmentadas por mercado, stack e oportunidade. C
 
 | Segmento / Vaga | Foco Técnico Principal | Idioma | 📥 Download PDF | 📝 Fonte Markdown |
 |---|---|:---:|:---:|:---:|
-| **Currículo Geral (Carro-Chefe)** | React Native, Python, Java 21, Next.js, SQLite, P2P | PT-BR | [Baixar PDF](./Curriculo_Caua_Felype_Reis_Geral.pdf) | [Ver Markdown](./CURRICULO_CAUA_REIS.md) |
+| **Currículo Geral (Carro-Chefe)** | Node.js/Express, Python, Java 21, C#, React/Next.js/React Native, NASA Space Apps / AI Agents | PT-BR | [Baixar PDF](./Curriculo_Caua_Felype_Reis_Geral.pdf) | [Ver Markdown](./CURRICULO_CAUA_REIS.md) |
 | **FIAP — Desenvolvedor(a) .NET** | C#, .NET 8–10, EF Core, SQL Server, AI Codex, Worker Services | PT-BR | [Baixar PDF](./Caua_Reis_Desenvolvedor_DotNet_FIAP.pdf) | [Ver Markdown](./CURRICULO_FIAP_DOTNET_C_SHARP_PT.md) |
 | **NTT DATA — Dev ERP & Sistemas** | Java 21, ERP Multi-Tenant, SQL, Arquitetura Hexagonal | PT-BR | [Baixar PDF](./Caua_Reis_Dev_Sistemas_ERP_NTT_Data.pdf) | [Ver Markdown](./CURRICULO_NTT_DATA_SAP_ERP_PT.md) |
 | **Tecmaster — Dev SAP ABAP & ERP** | SAP ABAP, ERP Multi-Tenant, Java 21, SQL, Fiori | PT-BR | [Baixar PDF](./Caua_Reis_Desenvolvedor_SAP_ABAP_Tecmaster.pdf) | [Ver Markdown](./CURRICULO_TECMASTER_SAP_ABAP_PT.md) |
@@ -52,9 +52,9 @@ Abaixo estão todas as versões segmentadas por mercado, stack e oportunidade. C
 ```
 Linguagens:        TypeScript, JavaScript (ESNext), Python 3.11+, Java 21, C, C#, PHP, SQL
 Mobile & Front:    React Native (Expo SDK 58), Next.js (App Router), React 19/18, Tailwind CSS, Three.js (WebGL 3D), Capacitor
-Backend & Srv:     ASP.NET Core (.NET 8-10), Spring Boot 3.3 (Virtual Threads), FastAPI (AsyncIO), Node.js, Worker Services
-IA & Agentes:      OpenAI Codex, Claude, Gemini API, Groq (Llama 3), Multi-Agent Systems (MAS/MoE), XAI (SHAP)
-Bancos & Cache:    PostgreSQL, SQL Server, MySQL, SQLite (Outbox / Local-First), Redis, Supabase, H2
+Backend & Srv:     ASP.NET Core (.NET 8-10), Spring Boot 3.3 (Virtual Threads), FastAPI (AsyncIO), Node.js (Express), Worker Services
+IA & Agentes:      Multi-Agent Systems (MAS/MoE), XAI (SHAP), Groq, Gemini API, Cerebras, Whisper/TTS, FFmpeg, Baileys, OpenAI Codex, Claude
+Bancos & APIs:     PostgreSQL, SQL Server, MySQL, SQLite (Outbox / Local-First), Redis, Supabase, H2, NASA POWER/GIBS, Open-Meteo, IBGE SIDRA
 Infra & DevOps:    Docker, Docker Compose, Linux/VPS, Nginx, PM2, Git/GitHub Actions, IIS, Bash/PowerShell
 Segurança:         OWASP Top 10, Criptografia AES / Ed25519, JWT Multi-Tenant, Row-Level Security (RLS)
 Metodologias:      Scrum Fundamentals Certified (SFC™), Clean Code, SOLID, Design Patterns
@@ -70,12 +70,11 @@ Metodologias:      Scrum Fundamentals Certified (SFC™), Clean Code, SOLID, Des
 - **Motor Financeiro:** Algoritmo proprietário de precificação dinâmica com trava anti-prejuízo, comissionamento automático de 30% do lucro líquido e conciliação instantânea via webhooks Mercado Pago (PIX).
 - **Resultados:** Mais de 200 operações financeiras concluídas e 99,9% de uptime mantido.
 
-### 2. **Bodega do Vidigal — Sistema de POS & KDS Offline-First**
-*Ecossistema completo de Ponto de Venda e Tela de Cozinha operando 100% offline.*
-- **Arquitetura P2P:** Comunicação direta entre dispositivos via WebSockets em rede móvel local (hotspot direto do aparelho), sem gastar 1 MB de dados e com latência < 10ms.
-- **Resiliência:** Banco de dados local SQLite com padrão de resiliência *Outbox pattern*, assegurando persistência atômica e zero duplicidade de comandas.
-- **UX Operacional Touchless:** "Contador de Carnes" somando blends em tempo real por ordem cronológica (FIFO) para operação sem toque na chapa.
-- **Qualidade:** 37 testes automatizados (unitários e ponta a ponta) no Jest.
+### 2. **PersonalAgro ("Zé Agro") — NASA Space Apps Challenge**
+*Assistente agronômico multi-agente 100% gratuito e zero-app/zero-login no WhatsApp para agricultura familiar.*
+- **Inclusão Digital & Voz:** Validado com 26 usuários reais em texto, áudio e fotos, com pipeline de voz acessível (`FFmpeg` + Whisper/Gemini + TTS com tradução fonética) e trava anti-efeito manada integrada a canais de escoamento (CEASA, cooperativas, CONAB/PAA/PNAE).
+- **Ciência Espacial da NASA:** Motor determinístico de rotação de culturas e painel geoespacial (`/rotacao`, 10 endpoints REST) integrando **NASA POWER** (`GWETROOT`), **NASA GIBS** (MODIS NDVI / SMAP L4), Open-Meteo (FAO ET0 14d), IBGE SIDRA, CEASA e ANP, coberto por 925 asserções em 4 suítes de testes.
+- **Arquitetura Multi-Agente de Baixo Custo:** 10 agentes especialistas, 16 ferramentas e 15 mil+ linhas em 30 módulos com failover automático (Groq, Gemini, Cerebras), reduzindo o contexto Embrapa em >55%, schemas em até 75% e o modo degradado em 98% (`24,2k → 493 chars`).
 
 ### 3. **OrenAI — Pesquisa de Ponta em IA (Artigo IEEE TSE)**
 *SaaS B2B de prospectividade mineral e redução de furos secos de sondagem.*
@@ -83,17 +82,24 @@ Metodologias:      Scrum Fundamentals Certified (SFC™), Clean Code, SOLID, Des
 - **XAI & Machine Learning:** Motor preditivo combinando Gradient Boosting com CNNs geoespaciais e interpretabilidade matemática total via SHAP.
 - **Artigo Científico:** Coautor de paper submetido à conceituada revista **IEEE Transactions on Software Engineering (IEEE TSE)**.
 
-### 4. **GymFlow — Plataforma Smart Gym Mobile-First** (*gymflow-weld.vercel.app*)
+### 4. **Bodega do Vidigal — Sistema de POS & KDS Offline-First**
+*Ecossistema completo de Ponto de Venda e Tela de Cozinha operando 100% offline.*
+- **Arquitetura P2P:** Comunicação direta entre dispositivos via WebSockets em rede móvel local (hotspot direto do aparelho), sem gastar 1 MB de dados e com latência < 10ms.
+- **Resiliência:** Banco de dados local SQLite com padrão de resiliência *Outbox pattern*, assegurando persistência atômica e zero duplicidade de comandas.
+- **UX Operacional Touchless:** "Contador de Carnes" somando blends em tempo real por ordem cronológica (FIFO) para operação sem toque na chapa.
+- **Qualidade:** 37 testes automatizados (unitários e ponta a ponta) no Jest.
+
+### 5. **GymFlow — Plataforma Smart Gym Mobile-First** (*gymflow-weld.vercel.app*)
 *SaaS mobile-first para gestão de academias e alunos.*
 - Desenvolvido em Next.js 14, Tailwind e TypeScript com empacotamento Android via Capacitor.
 - **Catraca Digital Anti-Fraude:** Token rotativo em QR Code dinâmico renovado a cada 30 segundos em memória.
 - Assistente biomecânico integrado via Google Gemini API e checkout PIX/Cartão Mercado Pago.
 
-### 5. **CoreSync CRM & NexoTrade-OS**
+### 6. **CoreSync CRM & NexoTrade-OS**
 - **CoreSync CRM:** B2B Multi-Tenant em Java 21 / Spring Boot 3 com partição em memória via `TenantContext` + `ThreadLocal`, auditoria via Spring AOP e orquestração de bots com Groq e Whisper.
 - **NexoTrade-OS:** Engine de paper trading consumindo stream de WebSockets da Binance em tempo real com Java 21 *Virtual Threads*.
 
-### 6. **MicroOS — Microkernel x86 32-bit do Zero**
+### 7. **MicroOS — Microkernel x86 32-bit do Zero**
 - Microkernel educacional desenvolvido em C e Assembly (GAS) executado no QEMU via Multiboot.
 - Paginação de 2 níveis, isolamento de processos em Ring 3, escalonador preemptivo Round-Robin (PIT 100Hz), chaveamento de contexto e IPC por portas/mensagens.
 

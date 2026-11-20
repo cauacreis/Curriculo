@@ -6,7 +6,7 @@
   <title>Currículo — Cauã Felype Caetano Reis</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary: #0f172a;
@@ -31,17 +31,17 @@
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background-color: #f8fafc;
       color: var(--text);
-      line-height: 1.42;
-      font-size: 12.4px;
+      line-height: 1.35;
+      font-size: 11.2px;
       -webkit-font-smoothing: antialiased;
-      padding: 18px;
+      padding: 16px;
     }
 
     .page-container {
       max-width: 860px;
       margin: 0 auto;
       background: var(--bg);
-      padding: 32px 40px;
+      padding: 28px 36px;
       box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
       border-radius: 8px;
     }
@@ -49,27 +49,27 @@
     /* Header */
     header {
       border-bottom: 2px solid var(--primary);
-      padding-bottom: 12px;
-      margin-bottom: 16px;
+      padding-bottom: 9px;
+      margin-bottom: 11px;
     }
 
     h1.name {
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 800;
       color: var(--primary);
       letter-spacing: -0.02em;
       text-transform: uppercase;
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
 
     .title-role {
-      font-size: 13.5px;
+      font-size: 12.2px;
       font-weight: 600;
       color: var(--accent);
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       flex-wrap: wrap;
     }
 
@@ -81,15 +81,15 @@
     .contact-bar {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px 16px;
-      font-size: 11.8px;
+      gap: 6px 14px;
+      font-size: 10.9px;
       color: var(--text-muted);
     }
 
     .contact-item {
       display: inline-flex;
       align-items: center;
-      gap: 5px;
+      gap: 4px;
     }
 
     .contact-item a {
@@ -106,11 +106,15 @@
 
     /* Section */
     section {
-      margin-bottom: 15px;
+      margin-bottom: 11px;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
     }
 
     .section-title {
-      font-size: 11.5px;
+      font-size: 11px;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.08em;
@@ -118,9 +122,11 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       border-bottom: 1px solid var(--border);
-      padding-bottom: 3px;
+      padding-bottom: 2px;
+      page-break-after: avoid;
+      break-after: avoid;
     }
 
     .section-title::after {
@@ -132,8 +138,8 @@
 
     p.summary {
       color: var(--text);
-      font-size: 12px;
-      line-height: 1.45;
+      font-size: 11px;
+      line-height: 1.38;
       text-align: justify;
     }
 
@@ -141,20 +147,20 @@
     .skills-block {
       display: flex;
       flex-direction: column;
-      gap: 5px;
-      font-size: 11.8px;
+      gap: 3.5px;
+      font-size: 10.8px;
     }
 
     .skill-row {
       display: flex;
       gap: 8px;
-      line-height: 1.38;
+      line-height: 1.33;
     }
 
     .skill-label {
       font-weight: 700;
       color: var(--text-dark);
-      min-width: 155px;
+      min-width: 175px;
       flex-shrink: 0;
     }
 
@@ -164,7 +170,7 @@
 
     /* Experience & Projects */
     .item-block {
-      margin-bottom: 12px;
+      margin-bottom: 9px;
       page-break-inside: avoid;
     }
 
@@ -176,11 +182,12 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 2px;
+      gap: 8px;
+      margin-bottom: 1.5px;
     }
 
     .item-title {
-      font-size: 13px;
+      font-size: 11.9px;
       font-weight: 700;
       color: var(--text-dark);
     }
@@ -196,29 +203,36 @@
 
     .item-badge {
       display: inline-block;
-      font-size: 10.5px;
+      font-size: 9.6px;
       font-weight: 600;
       color: var(--accent);
       background-color: #eff6ff;
       border: 1px solid #dbeafe;
-      padding: 1px 6px;
+      padding: 0.5px 5.5px;
       border-radius: 4px;
-      margin-left: 6px;
+      margin-left: 5px;
       vertical-align: middle;
     }
 
+    .item-badge-space {
+      color: #0369a1;
+      background-color: #e0f2fe;
+      border-color: #bae6fd;
+    }
+
     .item-date {
-      font-size: 11px;
+      font-size: 10.3px;
       font-weight: 500;
       color: var(--text-muted);
       flex-shrink: 0;
+      white-space: nowrap;
     }
 
     .item-subtitle {
-      font-size: 11.5px;
+      font-size: 10.7px;
       font-weight: 600;
       color: var(--text-muted);
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
 
     .item-subtitle a {
@@ -233,18 +247,22 @@
 
     ul.item-bullets li {
       position: relative;
-      padding-left: 14px;
-      margin-bottom: 3px;
-      font-size: 11.6px;
+      padding-left: 12px;
+      margin-bottom: 2.2px;
+      font-size: 10.75px;
       color: var(--text);
-      line-height: 1.38;
+      line-height: 1.33;
       text-align: justify;
+    }
+
+    ul.item-bullets li:last-child {
+      margin-bottom: 0;
     }
 
     ul.item-bullets li::before {
       content: "•";
       position: absolute;
-      left: 3px;
+      left: 2px;
       color: var(--accent);
       font-weight: bold;
     }
@@ -256,10 +274,10 @@
 
     code {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 10.5px;
+      font-size: 9.7px;
       background-color: var(--tag-bg);
       border: 1px solid var(--border);
-      padding: 1px 4px;
+      padding: 0.5px 3.5px;
       border-radius: 3px;
       color: #0f172a;
     }
@@ -281,7 +299,7 @@
         page-break-inside: avoid;
       }
       @page {
-        margin: 10mm 12mm;
+        margin: 9mm 11mm;
         size: A4 portrait;
       }
     }
@@ -296,12 +314,12 @@
       <div class="title-role">
         <span>Desenvolvedor Full-Stack</span>
         <span class="dot">•</span>
-        <span>Engenheiro de Software & IA</span>
+        <span>Engenheiro de Software &amp; IA</span>
         <span class="dot">•</span>
-        <span>Java 21 / Python / TypeScript</span>
+        <span>Python / TypeScript / Node.js / Java 21 / C#</span>
       </div>
       <div class="contact-bar">
-        <div class="contact-item">📍 Itaguaru, GO — Brasil</div>
+        <div class="contact-item">📍 Itaguaru / Anápolis, GO — Brasil</div>
         <div class="contact-item">📞 (62) 9 9452-1953</div>
         <div class="contact-item">✉️ <a href="mailto:caua.reis.dev@gmail.com">caua.reis.dev@gmail.com</a></div>
         <div class="contact-item">🔗 <a href="https://linkedin.com/in/cauafelypereis" target="_blank">linkedin.com/in/cauafelypereis</a></div>
@@ -314,7 +332,7 @@
     <section>
       <div class="section-title">Resumo Profissional</div>
       <p class="summary">
-        Engenheiro de Software e Desenvolvedor Full-Stack (4º período na UniEVANGÉLICA) com histórico comprovado de concepção, arquitetura e entrega de produtos digitais de alta complexidade em produção. Arquiteto e operador do <strong>SKZ Trading</strong>, plataforma SaaS de arbitragem algorítmica com 11 microserviços assíncronos em Python rodando 24/7 (99,9% uptime, latência &lt; 100ms e liquidação PIX automatizada). Coautor de artigo científico submetido à <strong>IEEE Transactions on Software Engineering</strong> sobre IA Explicável (XAI/SHAP) e arquitetura Multi-Agentes (MAS/MoE) na plataforma mineral <strong>OrenAI</strong>. Experiência sólida em sistemas concorrentes de alta escala com <strong>Java 21 (Virtual Threads, Spring Boot 3)</strong>, pipelines assíncronos em <strong>Python (AsyncIO, FastAPI)</strong>, frontend moderno com <strong>React Native (Expo SDK 58) / React 19 / Next.js / TypeScript</strong>, engenharia de agentes autônomos de IA e fundamentos de baixo nível em <strong>C (desenvolvimento de microkernel x86)</strong>.
+        Engenheiro de Software e Desenvolvedor Full-Stack (4º período na UniEVANGÉLICA, aulas noturnas — disponibilidade integral) com histórico comprovado de concepção, arquitetura e entrega ponta a ponta de produtos digitais de alta complexidade em produção. Arquiteto e operador do <strong>SKZ Trading</strong>, plataforma SaaS de arbitragem algorítmica com 11 microserviços assíncronos em Python rodando 24/7 (99,9% uptime, latência &lt; 100ms e liquidação PIX automatizada). Criador do <strong>PersonalAgro ("Zé Agro")</strong> no <strong>NASA Space Apps Challenge</strong>, assistente agronômico multi-agente zero-login no WhatsApp com 10 agentes especialistas, integração às APIs da NASA (POWER/GIBS), validado com 26 usuários reais e sustentado por 925 asserções de teste. Coautor de artigo científico submetido à <strong>IEEE Transactions on Software Engineering</strong> sobre IA Explicável (XAI/SHAP) e arquitetura Multi-Agentes (MAS/MoE) na plataforma mineral <strong>OrenAI</strong>. Ampla versatilidade técnica em <strong>Python (FastAPI, AsyncIO)</strong>, <strong>Node.js (Express)</strong>, <strong>Java 21 (Virtual Threads, Spring Boot 3)</strong>, <strong>C# (.NET)</strong>, frontend/mobile moderno (<strong>React 19, Next.js, React Native, Vue.js, TypeScript</strong>), bancos relacionais (<strong>PostgreSQL/Supabase, MySQL, SQL Server, SQLite, Redis</strong>), engenharia assistida por IA (Coding Agents), Scrum (SFC™), inglês avançado e fundamentos de baixo nível em <strong>C (microkernel x86)</strong>.
       </p>
     </section>
 
@@ -324,31 +342,35 @@
       <div class="skills-block">
         <div class="skill-row">
           <span class="skill-label">Linguagens:</span>
-          <span class="skill-val">TypeScript, JavaScript (ESNext), Python 3.11+, Java 21, C, PHP, SQL</span>
+          <span class="skill-val">TypeScript, JavaScript (ESNext), Python 3.11+, Java 21, C#, C, Assembly (x86 GAS), PHP, SQL</span>
         </div>
         <div class="skill-row">
-          <span class="skill-label">Frontend & Mobile:</span>
-          <span class="skill-val">React Native (Expo SDK 58), Next.js (App Router), React 19/18, TypeScript, Tailwind CSS, Vite, Three.js (WebGL 3D), Capacitor (Android/Play Store), PWA, Recharts</span>
+          <span class="skill-label">Frontend &amp; Mobile:</span>
+          <span class="skill-val">React 19/18, Next.js (App Router), React Native (Expo SDK 58), Vue.js, Tailwind CSS, Vite, Three.js (WebGL 3D), Capacitor (Android/Play Store), PWA, Recharts, HTML5/CSS3</span>
         </div>
         <div class="skill-row">
-          <span class="skill-label">Backend & Arquitetura:</span>
-          <span class="skill-val">Java 21 (Virtual Threads, Spring Boot 3.3, Spring Security, JPA), Python (AsyncIO, aiohttp, FastAPI), Node.js, PHP, Multi-Tenant SaaS (TenantContext), Arquitetura Hexagonal, Microserviços, WebSockets em tempo real, REST APIs</span>
+          <span class="skill-label">Backend &amp; Arquitetura:</span>
+          <span class="skill-val">Python (FastAPI, AsyncIO, aiohttp, Pydantic), Node.js (Express), Java 21 (Virtual Threads, Spring Boot 3.3, Spring Security, JPA, AOP), C# / .NET (ASP.NET Core, EF Core, LINQ), PHP, Arquitetura Hexagonal, Microsserviços, Multi-Tenant SaaS (<code>TenantContext</code>), REST APIs, WebSockets em tempo real, Webhooks, Worker Services</span>
         </div>
         <div class="skill-row">
-          <span class="skill-label">IA, Agentes & LLMs:</span>
-          <span class="skill-val">Sistemas Multi-Agentes (MAS), Mixture of Experts (MoE), XAI (SHAP), Claude Sonnet, OpenAI API, Groq (Llama 3), Google Gemini API, RAG, Prompt Engineering, WhatsApp Automation (Baileys & Meta Business API), Telegram Bots API</span>
+          <span class="skill-label">IA, Agentes &amp; Multimídia:</span>
+          <span class="skill-val">Sistemas Multi-Agentes (MAS / MoE), XAI (SHAP), XGBoost/LightGBM, Groq (Llama 3), Google Gemini API, Cerebras, OpenAI / Whisper, Claude Sonnet, TTS / Tradução Fonética, FFmpeg, RAG, Otimização de Contexto/Tokens &amp; Failover Multi-Provedor, Engenharia Assistida por IA (Coding Agents / MCP), WhatsApp Automation (Baileys &amp; Meta Business API), Telegram Bots API</span>
         </div>
         <div class="skill-row">
-          <span class="skill-label">Bancos de Dados:</span>
-          <span class="skill-val">PostgreSQL, MySQL, Supabase, SQLite (Local-First / Outbox), Redis, H2 In-Memory, PostGIS</span>
+          <span class="skill-label">Bancos de Dados &amp; APIs:</span>
+          <span class="skill-val">PostgreSQL, Supabase, PostGIS, MySQL, SQL Server (T-SQL), SQLite (Local-First / Outbox Pattern), Redis, H2 In-Memory, APIs Geoespaciais &amp; Públicas (NASA POWER, NASA GIBS MODIS/SMAP, Open-Meteo, IBGE SIDRA, CEASA, ANP)</span>
         </div>
         <div class="skill-row">
-          <span class="skill-label">Cloud, DevOps & Infra:</span>
-          <span class="skill-val">Docker, Docker Compose, Linux/VPS, Nginx, PM2, Vercel, Oracle Cloud, Git/GitHub, CI/CD (GitHub Actions), Bash/PowerShell</span>
+          <span class="skill-label">Testes, Cloud &amp; Infra:</span>
+          <span class="skill-val">Testes Automatizados (Jest, Pytest, JUnit — 960+ asserções/testes em projetos), Docker, Docker Compose, Linux/VPS, Nginx, PM2, Vercel, Oracle Cloud, Git/GitHub (GitFlow, Code Review), CI/CD (GitHub Actions), Bash/PowerShell, Redes TCP/IP &amp; Manutenção de Hardware</span>
         </div>
         <div class="skill-row">
-          <span class="skill-label">Segurança & Resiliência:</span>
-          <span class="skill-val">Hardening OWASP Top 10, Criptografia AES / Ed25519, Row-Level Security (RLS), JWT multi-tenant, Rate Limiting (Bucket4j), Optimistic Locking (@Version), Prevenção XSS/SQLi</span>
+          <span class="skill-label">Segurança &amp; Resiliência:</span>
+          <span class="skill-val">Hardening OWASP Top 10, Criptografia Ed25519 / AES, Row-Level Security (RLS), JWT Multi-Tenant, 2FA, Rate Limiting (Bucket4j), Optimistic Locking (<code>@Version</code>), Transações ACID, Prevenção XSS/SQLi</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Metodologias &amp; Gestão:</span>
+          <span class="skill-val">Scrum (SFC™ Certified), Kanban, Agile, Design Thinking, Clean Code, SOLID, Design Patterns, Modelagem UML</span>
         </div>
       </div>
     </section>
@@ -365,34 +387,64 @@
           </div>
           <div class="item-date">Jul 2026 – Presente</div>
         </div>
-        <div class="item-subtitle">Full-Stack Developer & Arquiteto de Software | Plataforma SaaS de Arbitragem de Ativos Digitais</div>
+        <div class="item-subtitle">Full-Stack Developer &amp; Arquiteto de Software | Plataforma SaaS de Arbitragem de Ativos Digitais</div>
         <ul class="item-bullets">
-          <li><strong>Arquitetura de Microserviços:</strong> Arquitetei e implantei 11 microserviços assíncronos em Python (<code>asyncio</code>, <code>aiohttp</code>) orquestrados via PM2 em VPS Linux, automatizando 100% do ciclo de descoberta, precificação e execução com varredura a cada 20 segundos.</li>
+          <li><strong>Arquitetura de Microsserviços:</strong> Arquitetei e implantei 11 microserviços assíncronos em Python (<code>asyncio</code>, <code>aiohttp</code>) orquestrados via PM2 em VPS Linux, automatizando 100% do ciclo de descoberta, precificação e execução com varredura a cada 20 segundos.</li>
           <li><strong>Motor de Precificação Dinâmica:</strong> Desenvolvi algoritmo proprietário com score de liquidez (0–100 em 4 camadas de análise), aplicando desconto mínimo de 12% na compra, margem líquida alvo de 15% na venda e trava anti-prejuízo que impossibilita alienações abaixo do custo.</li>
-          <li><strong>Pipeline Financeiro & Multi-Tenant:</strong> Modelei banco MySQL e pipeline automatizado de comissionamento sobre o lucro líquido (30%), com liquidação instantânea via webhooks do Mercado Pago (PIX) e bloqueio automático por inadimplência.</li>
-          <li><strong>Painel em Tempo Real & Métricas:</strong> Desenvolvi dashboard executivo em React (Vite) + PHP com autenticação 2FA por QR Code, inventário em tempo real e tracking operacional — somando mais de 200 operações concluídas e 99,9% de uptime mantido.</li>
+          <li><strong>Pipeline Financeiro &amp; Multi-Tenant:</strong> Modelei banco MySQL e pipeline automatizado de comissionamento sobre o lucro líquido (30%), com liquidação instantânea via webhooks do Mercado Pago (PIX) e bloqueio automático por inadimplência.</li>
+          <li><strong>Painel em Tempo Real &amp; Métricas:</strong> Desenvolvi dashboard executivo em React (Vite) + PHP com autenticação 2FA por QR Code, inventário em tempo real e tracking operacional — somando mais de 200 operações concluídas e 99,9% de uptime mantido.</li>
           <li><strong>Hardening de Segurança:</strong> Implementei criptografia assimétrica/simétrica local no servidor (Ed25519/AES) alinhada ao OWASP Top 10, eliminando a exposição de chaves privadas em trânsito e assegurando segredo absoluto de credenciais.</li>
+        </ul>
+      </div>
+
+      <div class="item-block">
+        <div class="item-header">
+          <div class="item-title">
+            Técnico Autônomo em Infraestrutura &amp; Suporte de TI
+            <span class="item-badge">Atuação Prática</span>
+          </div>
+          <div class="item-date">2023 – Presente</div>
+        </div>
+        <ul class="item-bullets">
+          <li><strong>Hardware &amp; Sistemas Operacionais:</strong> Realizei diagnóstico, montagem, manutenção preventiva/corretiva de desktops e notebooks, upgrades para SSD/NVMe com migração segura de dados, instalação/otimização de Windows 10/11 e Linux, e remoção de malwares.</li>
+          <li><strong>Redes &amp; Suporte Técnico:</strong> Configurei redes locais TCP/IP, cabeamento RJ45, roteadores, impressoras/periféricos de ponto comercial e prestei suporte técnico presencial/remoto (AnyDesk, RDP) a usuários finais e comércios locais.</li>
         </ul>
       </div>
     </section>
 
     <!-- Projetos de Engenharia -->
     <section>
-      <div class="section-title">Projetos de Engenharia em Destaque</div>
+      <div class="section-title">Projetos de Engenharia &amp; Pesquisa em Destaque</div>
 
       <div class="item-block">
         <div class="item-header">
           <div class="item-title">
-            OrenAI — SaaS B2B de Prospectividade Mineral & Artigo Científico (IEEE TSE)
+            PersonalAgro ("Zé Agro") — Assistente Agronômico Multi-Agente &amp; Ciência Espacial
+            <span class="item-badge item-badge-space">NASA Space Apps Challenge</span>
+          </div>
+          <div class="item-date">2026</div>
+        </div>
+        <div class="item-subtitle">Criador &amp; Engenheiro Full-Stack / IA | Node.js, Express, Supabase/PostgreSQL, Baileys (WhatsApp), Groq, Gemini, Cerebras, NASA POWER/GIBS, Open-Meteo, FFmpeg</div>
+        <ul class="item-bullets">
+          <li><strong>Inclusão Digital &amp; Impacto Social (Segurança Alimentar):</strong> Construí um assistente agronômico 100% gratuito e zero-app/zero-login no WhatsApp voltado à agricultura familiar (público com &gt;80% sem assistência técnica e ~25% com barreira de leitura), validado com <strong>26 usuários reais</strong> em texto, áudio e fotos, ao implementar pipeline de voz acessível (<code>FFmpeg</code> + Whisper/Gemini + TTS com tradução fonética de termos técnicos) e trava anônima anti-efeito manada conectada a canais de escoamento (CEASA, cooperativas e CONAB/PAA/PNAE).</li>
+          <li><strong>Ciência Espacial da NASA &amp; Dados Reais:</strong> Desenvolvi um motor determinístico de rotação de culturas e painel geoespacial (<code>/rotacao</code>, 10 endpoints REST) integrando <strong>NASA POWER</strong> (umidade na raiz <code>GWETROOT</code>, chuva e calor), camadas ao vivo <strong>NASA GIBS</strong> (MODIS NDVI e SMAP L4), Open-Meteo (FAO ET0 14d), IBGE (SIDRA PAM), CEASA e ANP/Diesel, sustentado por <strong>925 asserções em 4 suítes de testes automatizados</strong>.</li>
+          <li><strong>Arquitetura Multi-Agente de Baixo Custo:</strong> Viabilizei operação gratuita em escala com <strong>10 agentes especialistas</strong>, 16 ferramentas e 15 mil+ linhas em 30 módulos, reduzindo o contexto da base Embrapa em &gt;55%, o schema de ferramentas em até 75% e o modo degradado em 98% (<code>24,2k → 493 chars</code>), combinando filtros determinísticos/Levenshtein 0-token, micro-agentes paralelos e pool multi-provedor com failover automático (Groq, Gemini e Cerebras).</li>
+        </ul>
+      </div>
+
+      <div class="item-block">
+        <div class="item-header">
+          <div class="item-title">
+            OrenAI — SaaS B2B de Prospectividade Mineral &amp; Artigo Científico (IEEE TSE)
             <span class="item-badge">MAS / XAI</span>
           </div>
           <div class="item-date">2025 – Presente</div>
         </div>
-        <div class="item-subtitle">Líder Técnico & Arquiteto de Software / MAS | Pesquisador UniEVANGÉLICA</div>
+        <div class="item-subtitle">Líder Técnico &amp; Arquiteto de Software / MAS | Pesquisador UniEVANGÉLICA · <a href="https://github.com/cauacreis/OrenAI" target="_blank">github.com/cauacreis/OrenAI</a></div>
         <ul class="item-bullets">
           <li><strong>Arquitetura Multi-Agentes (MAS / MoE):</strong> Arquitetei sistema distribuído em contêineres Docker isolados por commodity mineral, reduzindo o risco e custo de furos secos de sondagem (mercado global de US$ 12B/ano).</li>
-          <li><strong>Ensemble MAPDA & XAI:</strong> Co-desenvolvi motor preditivo combinando Gradient Boosting (XGBoost/LightGBM) para dados geoquímicos tabulares com CNNs para imagens espaciais, integrando interpretabilidade matemática via SHAP (100% dos alvos explicados sem modelo caixa-preta).</li>
-          <li><strong>Interface HITL & Visualização 3D:</strong> Desenvolvi visualizador 3D de subsuperfície em Three.js/WebGL com malhas e nuvens de pontos de corpos mineralizados, mapa geoespacial 2D interativo e fluxo Human-in-the-Loop com Active Learning.</li>
+          <li><strong>Ensemble MAPDA &amp; XAI:</strong> Co-desenvolvi motor preditivo combinando Gradient Boosting (XGBoost/LightGBM) para dados geoquímicos tabulares com CNNs para imagens espaciais, integrando interpretabilidade matemática via SHAP (100% dos alvos explicados sem modelo caixa-preta).</li>
+          <li><strong>Interface HITL &amp; Visualização 3D:</strong> Desenvolvi visualizador 3D de subsuperfície em Three.js/WebGL com malhas e nuvens de pontos de corpos mineralizados, mapa geoespacial 2D interativo e fluxo Human-in-the-Loop com Active Learning.</li>
           <li><strong>Artigo IEEE:</strong> Coautor de artigo científico submetido à conceituada revista <em>IEEE Transactions on Software Engineering</em> (status: aguardando aprovação dos autores), responsável pelos diagramas de arquitetura, modelagem lógica de dados e especificação formal.</li>
         </ul>
       </div>
@@ -400,17 +452,17 @@
       <div class="item-block">
         <div class="item-header">
           <div class="item-title">
-            Bodega do Vidigal — Sistema de Gestão de Pedidos Offline-First (POS & KDS)
+            Bodega do Vidigal — Sistema de Gestão de Pedidos Offline-First (POS &amp; KDS)
             <span class="item-badge">React Native / Expo SDK 58</span>
           </div>
           <div class="item-date">2026</div>
         </div>
-        <div class="item-subtitle">Arquiteto de Software & Engenheiro Mobile | React Native · SQLite Local · WebSockets P2P</div>
+        <div class="item-subtitle">Arquiteto de Software &amp; Engenheiro Mobile | React Native · SQLite Local · WebSockets P2P</div>
         <ul class="item-bullets">
-          <li><strong>Arquitetura Offline-First & P2P Sem Internet:</strong> Concepção e implantação de ecossistema completo de Ponto de Venda (POS) e Tela de Cozinha (KDS) operando 100% offline via rede local móvel (hotspot direto do aparelho), sincronizando comandas por WebSockets locais com latência &lt; 10ms e zero dependência de infraestrutura de rede externa ou plano de dados.</li>
-          <li><strong>Persistência Local & Outbox Pattern:</strong> Modelei banco local SQLite com arquitetura transacional tolerante a quedas (Outbox pattern), assegurando persistência atômica, histórico de turnos e zero duplicidade de comandas mesmo em caso de desligamento abrupto de terminais.</li>
-          <li><strong>Fila FIFO & "Contador de Carnes" Touchless:</strong> Desenvolveu interface KDS desenhada para operação sob calor e gordura na chapa, integrando somador automático em tempo real da quantidade de blends por prioridade cronológica (FIFO) sem necessidade de toque na tela, além de observações individuais por hambúrguer.</li>
-          <li><strong>Testes & Confiabilidade Operacional:</strong> Implementou esteira de 37 testes automatizados (unitários e ponta a ponta via Jest) cobrindo ciclo de vida de pedidos, confirmação de entrega pelo balcão e rotina de auto-reset de comandas pendentes no fechamento.</li>
+          <li><strong>Arquitetura Offline-First &amp; P2P Sem Internet:</strong> Concebi e entreguei ecossistema completo de Ponto de Venda (POS) e Tela de Cozinha (KDS) operando 100% offline via rede local móvel (hotspot direto do aparelho), sincronizando comandas por WebSockets locais com latência &lt; 10ms e zero custo de infraestrutura de rede ou dados móveis.</li>
+          <li><strong>Persistência Local &amp; Outbox Pattern:</strong> Modelei banco local SQLite com arquitetura transacional tolerante a quedas (Outbox pattern), assegurando persistência atômica, histórico de turnos e zero duplicidade de comandas mesmo em caso de desligamento abrupto de terminais.</li>
+          <li><strong>Fila FIFO &amp; "Contador de Carnes" Touchless:</strong> Desenvolvi interface KDS desenhada para operação sob calor e gordura na chapa, integrando somador automático em tempo real da quantidade de blends necessários por prioridade cronológica (FIFO) sem necessidade de toque na tela, além de observações individuais por item.</li>
+          <li><strong>Testes &amp; Confiabilidade Operacional:</strong> Implementei esteira de 37 testes automatizados (unitários e ponta a ponta via Jest) cobrindo ciclo de vida de pedidos, confirmação de entrega pelo balcão e rotina de auto-reset programado no fechamento.</li>
         </ul>
       </div>
 
@@ -422,24 +474,24 @@
           </div>
           <div class="item-date">Set 2026</div>
         </div>
-        <div class="item-subtitle">Arquiteto de Software & Engenheiro Full-Stack | <a href="https://gymflow-weld.vercel.app" target="_blank">gymflow-weld.vercel.app</a></div>
+        <div class="item-subtitle">Arquiteto de Software &amp; Engenheiro Full-Stack | <a href="https://gymflow-weld.vercel.app" target="_blank">gymflow-weld.vercel.app</a></div>
         <ul class="item-bullets">
-          <li><strong>Arquitetura Mobile-First & Play Store Ready:</strong> Desenvolvido em Next.js 14, TypeScript e Tailwind CSS, otimizado para smartphones com viewport nativo (<code>viewport-fit=cover</code>), navegação háptica e ponte Capacitor Android pronta para empacotamento APK/AAB.</li>
+          <li><strong>Arquitetura Mobile-First &amp; Play Store Ready:</strong> Desenvolvi em Next.js 14, TypeScript e Tailwind CSS, otimizado para smartphones com viewport nativo (<code>viewport-fit=cover</code>), navegação háptica e ponte Capacitor Android pronta para empacotamento APK/AAB.</li>
           <li><strong>Catraca Digital Anti-Fraude (GymFlow Pass):</strong> Criei token rotativo criptografado em QR Code de alta resolução com renovação a cada 30 segundos em memória, prevenindo compartilhamento indevido de telas ou fraudes de portaria.</li>
-          <li><strong>Ficha Interativa & Carga Dinâmica:</strong> Implementei construtor de treinos (Split A/B/C) com contagem regressiva háptica de descanso e cálculo em tempo real de tonelagem e volume de carga levantada.</li>
-          <li><strong>GymBot AI & Monetização:</strong> Integrei assistente com motor duplo (conhecimento biomecânico determinístico + Google Gemini API) e checkout com Mercado Pago (PIX e cartão de crédito).</li>
+          <li><strong>Ficha Interativa &amp; Carga Dinâmica:</strong> Implementei construtor de treinos (Split A/B/C) com contagem regressiva háptica de descanso e cálculo em tempo real de tonelagem e volume de carga levantada.</li>
+          <li><strong>GymBot AI &amp; Monetização:</strong> Integrei assistente com motor duplo (conhecimento biomecânico determinístico + Google Gemini API) e checkout com Mercado Pago (PIX e cartão de crédito).</li>
         </ul>
       </div>
 
       <div class="item-block">
         <div class="item-header">
           <div class="item-title">
-            LeadProspector & LinkedinTalk — Agentes Autônomos de IA & Prospecção B2B
+            LeadProspector &amp; LinkedinTalk — Agentes Autônomos de IA &amp; Prospecção B2B
             <span class="item-badge">Open Source / Agentic</span>
           </div>
           <div class="item-date">2025 – 2026</div>
         </div>
-        <div class="item-subtitle">Arquiteto de Software & Engenheiro de IA (Open Source)</div>
+        <div class="item-subtitle">Arquiteto de Software &amp; Engenheiro de IA (Open Source)</div>
         <ul class="item-bullets">
           <li><strong>Agente Autônomo WhatsApp (LeadProspector):</strong> Construí sistema autônomo (Python 3.11, Docker Compose, Redis, PostgreSQL) que integra 9 fontes de dados (Apollo, Hunter, Google Maps, LinkedIn), scoring híbrido de ICP (regras 40% + LLM 60%) e máquina de estados de 8 estágios com suporte dual a Baileys e Meta Business API.</li>
           <li><strong>Copiloto Human-in-the-Loop (LinkedinTalk):</strong> Criei copiloto de personal branding em Python (FastAPI) e TypeScript com banco Postgres/SQLite, arquitetura defensiva anti-ban, testes automatizados e esteira de CI/CD via GitHub Actions.</li>
@@ -449,7 +501,7 @@
       <div class="item-block">
         <div class="item-header">
           <div class="item-title">
-            CoreSync CRM & NexoTrade-OS — Engenharia Backend de Alta Performance
+            CoreSync CRM &amp; NexoTrade-OS — Engenharia Backend de Alta Performance
             <span class="item-badge">Java 21 / Spring Boot 3</span>
           </div>
           <div class="item-date">2026</div>
@@ -469,7 +521,7 @@
           </div>
           <div class="item-date">2026</div>
         </div>
-        <div class="item-subtitle">Desenvolvedor de Sistemas Operacionais</div>
+        <div class="item-subtitle">Desenvolvedor de Sistemas Operacionais | <a href="https://github.com/cauacreis/MicroOS" target="_blank">github.com/cauacreis/MicroOS</a></div>
         <ul class="item-bullets">
           <li>Desenvolvi microkernel educacional x86 em C e Assembly (GAS) executado no QEMU via Multiboot, com paginação de 2 níveis, isolamento de processos em Ring 3, escalonador round-robin preemptivo (PIT 100Hz), troca de contexto, IPC por portas/mensagens e drivers em userspace.</li>
         </ul>
@@ -485,35 +537,35 @@
           <div class="item-title">Bacharelado em Engenharia de Software — UniEVANGÉLICA (Anápolis, GO)</div>
           <div class="item-date">Fev 2025 – Dez 2028 (Previsão)</div>
         </div>
-        <div class="item-subtitle">4º Período</div>
+        <div class="item-subtitle">4º Período · Aulas no período noturno (disponibilidade integral)</div>
         <ul class="item-bullets">
-          <li><strong>Liderança & Atividades:</strong> Vice-Presidente do Diretório Acadêmico CodeUp; Diretor de Artes & Cultura (E-games / Robocode).</li>
-          <li><strong>Reconhecimentos:</strong> Finalista do Start Agro Innovation 2025; Participante do PuzzleWeek 2025.</li>
+          <li><strong>Liderança &amp; Atividades:</strong> Vice-Presidente do Diretório Acadêmico CodeUp; Diretor de Artes &amp; Cultura (E-games / Robocode).</li>
+          <li><strong>Reconhecimentos &amp; Eventos:</strong> Participação no <strong>NASA Space Apps Challenge</strong> (PersonalAgro / "Zé Agro"); Finalista do <strong>Start Agro Innovation 2025</strong>; Participante do <strong>PuzzleWeek 2025</strong>; Coautor de artigo científico submetido à <strong>IEEE Transactions on Software Engineering (IEEE TSE)</strong>.</li>
         </ul>
       </div>
 
       <div class="item-block">
         <div class="item-header">
           <div class="item-title">Programador Desktop — Trilha de Certificação — Instituto Mix</div>
-          <div class="item-date">Out 2022 – Jun 2024</div>
+          <div class="item-date">Out 2022 – Jun 2024 (Concluído)</div>
         </div>
         <ul class="item-bullets">
-          <li>Certificações concluídas: Banco de Dados, C# (Mód. 1–2), Java (Mód. 1–2), Lógica de Programação, POO e Modelagem UML.</li>
+          <li>Formação prática presencial em Banco de Dados Relacional (SQL), C# (Mód. 1–2), Java (Mód. 1–2), Lógica de Programação, POO e Modelagem UML.</li>
         </ul>
       </div>
     </section>
 
     <!-- Certificações e Idiomas -->
     <section>
-      <div class="section-title">Certificações & Idiomas</div>
+      <div class="section-title">Certificações &amp; Idiomas</div>
       <div class="skills-block">
         <div class="skill-row">
           <span class="skill-label">Certificações:</span>
-          <span class="skill-val">Scrum Fundamentals Certified (SFC™) — SCRUMstudy (03/2026) · Storytelling e Comunicação Técnica — UniEVANGÉLICA (2025)</span>
+          <span class="skill-val">Scrum Fundamentals Certified (SFC™) — SCRUMstudy (ID: 03/2026) · Storytelling e Comunicação Técnica — UniEVANGÉLICA (2025) · Formação Programador Desktop (C#, Java, SQL, POO, UML) — Instituto Mix (2024) · Fundamentos de Redes TCP/IP &amp; Manutenção de Hardware</span>
         </div>
         <div class="skill-row">
           <span class="skill-label">Idiomas:</span>
-          <span class="skill-val">Português (Nativo) · Inglês (Avançado — Leitura técnica, escrita de artigos e conversação profissional) · Espanhol (Básico)</span>
+          <span class="skill-val">Português (Nativo) · Inglês (Avançado — Leitura técnica, escrita de artigos científicos e conversação profissional) · Espanhol (Básico)</span>
         </div>
       </div>
     </section>
